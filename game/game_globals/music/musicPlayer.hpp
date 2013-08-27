@@ -54,7 +54,17 @@ namespace audio
             }
             else if( getCurrentSongStatus() == sf::Music::Playing )
             {
-
+                if( _fadeout != 0.0 )
+                {
+                    if( _activeSong->getPlayingOffset().asSeconds() < _fadeout )
+                    {
+                        _activeSong->setVolume( _activeSong->getPlayingOffset().asSeconds() / _fadeout );
+                    }
+                    else if( _activeSong->getPlayingOffset().asSeconds() - _activeSong->getDuration().asSeconds() < _fadeout )
+                    {
+                        _activeSong->setVolume( 1.0 - _activeSong->getPlayingOffset().asSeconds() / _fadeout );
+                    }
+                }
             }
         };
 
