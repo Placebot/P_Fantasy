@@ -27,6 +27,11 @@ public:
     void removeFromQueue( extend::drawable & object ) { if( toDraw.size() ){ for( unsigned int i = 0; i < toDraw.size(); i++ ){ if( toDraw[i] == &object ) { toDraw.erase( toDraw.begin() + i ); toDrawA.erase( toDrawA.begin() + i ); } } } };
     void removeFromQueue( animateable & object ) { if( toDrawA.size() ){ for( unsigned int i = 0; i < toDrawA.size(); i++ ){ if( toDrawA[i] == &object ) { toDraw.erase( toDraw.begin() + i ); toDrawA.erase( toDrawA.begin() + i ); } } } };
 
+    void addToTopQueue( extend::drawable & object ) { toDrawTopLevel.push_back( &object ); toDrawATopLevel.push_back( NULL ); };
+    void addToTopQueue( animateable & object ) { toDrawATopLevel.push_back( &object ); toDrawTopLevel.push_back( NULL ); };
+    void removeFromTopQueue( extend::drawable & object ) { if( toDrawTopLevel.size() ){ for( unsigned int i = 0; i < toDrawTopLevel.size(); i++ ){ if( toDrawTopLevel[i] == &object ) { toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
+    void removeFromTopQueue( animateable & object ) { if( toDrawATopLevel.size() ){ for( unsigned int i = 0; i < toDrawATopLevel.size(); i++ ){ if( toDrawATopLevel[i] == &object ) { toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
+
     void draw()
     {
         if( toDraw.size() )
@@ -47,6 +52,17 @@ public:
                 else
                     toDraw[i]->draw( *Win );
             }
+
+            for( unsigned int i = 0; i < toDrawTopLevel.size(); i++ )
+            {
+                if( toDrawTopLevel[i] == NULL )
+                {
+                    toDrawATopLevel[i]->update();
+                    toDrawATopLevel[i]->draw( *Win );
+                }
+                else
+                    toDrawTopLevel[i]->draw( *Win );
+            }
             Win->display();
             #if defined PF_OUTPUT_DEBUG_C_CONSOLE
                 std::cout << "Time spent for drawing = " << DrawTime.asSeconds() << std::endl;
@@ -62,6 +78,9 @@ public:
 private:
     std::vector< extend::drawable * > toDraw;
     std::vector< animateable * > toDrawA;
+
+    std::vector< extend::drawable * > toDrawTopLevel;
+    std::vector< animateable * > toDrawATopLevel;
 };
 
 #endif // drawer_hpp

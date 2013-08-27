@@ -44,7 +44,6 @@ public:
 
     void boot()
     {
-        std::cout << "entering" << std::endl;
         startup();
         bool exit = false;
         sf::RenderWindow *Win = game_state::config::getConfig().getWindow();
@@ -100,7 +99,6 @@ public:
 
             drawer::getDrawer().draw();
         }
-        std::cout << "exciting" << std::endl;
     };
 
 private:
