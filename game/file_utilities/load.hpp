@@ -147,7 +147,7 @@ namespace file
                 pos = nextPos + 1;
             }
             return tokens;
-        } ///! Zeke's code
+        }; ///! Zeke's code
     private:
         std::string _data;
         std::vector< std::string > _data_formatted;

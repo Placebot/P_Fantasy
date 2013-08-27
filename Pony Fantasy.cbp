@@ -14,7 +14,7 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
-					<Add directory="D:/Projects/Pony Fantasy/game" />
+					<Add directory="D:/Repos/P_Fantasy/game" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-d" />

@@ -149,3 +149,134 @@
 	<string>
 	<vector>
 
+1375785040 source:d:\repos\p_fantasy\game\graphic\positioning.cpp
+	<graphic/positioning.hpp>
+
+1375785040 d:\repos\p_fantasy\game\graphic\positioning.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1376830813 source:d:\repos\p_fantasy\game\main_menu\main_menu\main_menu.cpp
+	<main_menu/main_menu/main_menu.hpp>
+
+1375732944 d:\repos\p_fantasy\game\main_menu\main_menu\main_menu.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1377429739 d:\repos\p_fantasy\game\game_globals\config.hpp
+	<game_globals/extend.hpp>
+	<game_globals/top_level_globals.hpp>
+
+1376830794 d:\repos\p_fantasy\game\game_globals\extend.hpp
+	<SFML/Graphics.hpp>
+
+1376155445 d:\repos\p_fantasy\game\game_globals\top_level_globals.hpp
+
+1375704598 source:d:\repos\p_fantasy\game\main_menu\main_menu_load\main_menu_load.cpp
+	<main_menu/main_menu_load/main_menu_load.hpp>
+
+1375732944 d:\repos\p_fantasy\game\main_menu\main_menu_load\main_menu_load.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375704915 source:d:\repos\p_fantasy\game\main_menu\main_menu_mp_start\main_menu_mp_start.cpp
+	<main_menu/main_menu_mp_start/main_menu_mp_start.hpp>
+
+1375732944 d:\repos\p_fantasy\game\main_menu\main_menu_mp_start\main_menu_mp_start.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375705269 source:d:\repos\p_fantasy\game\main_menu\main_menu_settings\main_menu_settings.cpp
+	<main_menu/main_menu_settings/main_menu_settings.hpp>
+
+1375732944 d:\repos\p_fantasy\game\main_menu\main_menu_settings\main_menu_settings.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1377426220 source:d:\repos\p_fantasy\main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<game_globals/game_globals.hpp>
+	<graphic/graphic.hpp>
+	<file_utilities/serializeable.hpp>
+	<game_globals/music/musicPlayer.hpp>
+	<game_globals/music/playlist.hpp>
+	<main_menu/main_menu_list.hpp>
+
+1376758694 d:\repos\p_fantasy\game\game_globals\game_globals.hpp
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+	<game_globals/top_level_globals.hpp>
+	<game_globals/drawer/drawer.hpp>
+	<game_globals/console/console.hpp>
+
+1377361612 d:\repos\p_fantasy\game\game_globals\drawer\drawer.hpp
+	<iostream>
+	<vector>
+	<game_globals/extend.hpp>
+	<game_globals/config.hpp>
+	<graphic/animation/animation.hpp>
+	<game_globals/console/console_data_grabber.hpp>
+	<sstream>
+
+1376830794 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
+	<game_globals/extend.hpp>
+
+1376832158 d:\repos\p_fantasy\game\game_globals\console\console_data_grabber.hpp
+	<iostream>
+	<string>
+
+1377362119 d:\repos\p_fantasy\game\game_globals\console\console.hpp
+	<iostream>
+	<string>
+	<sstream>
+	<game_globals/config.hpp>
+	<game_globals/drawer/drawer.hpp>
+	<game_globals/console/console_data_grabber.hpp>
+
+1375785792 d:\repos\p_fantasy\game\graphic\graphic.hpp
+	<graphic/positioning.hpp>
+	<graphic/table.hpp>
+
+1375785797 d:\repos\p_fantasy\game\graphic\table.hpp
+	<SFML/Graphics.hpp>
+
+1375960681 d:\repos\p_fantasy\game\file_utilities\serializeable.hpp
+	<file_utilities/save.hpp>
+	<file_utilities/load.hpp>
+
+1375828849 d:\repos\p_fantasy\game\file_utilities\save.hpp
+	<fstream>
+
+1377604281 d:\repos\p_fantasy\game\file_utilities\load.hpp
+	<vector>
+	<string>
+	<fstream>
+	<sstream>
+	<SFML/Graphics.hpp>
+
+1377429738 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
+	<string>
+	<iostream>
+	<game_globals/music/playlist.hpp>
+	<SFML/Audio.hpp>
+
+1377429048 d:\repos\p_fantasy\game\game_globals\music\playlist.hpp
+	<SFML/Audio.hpp>
+	<iostream>
+	<string>
+	<vector>
+
+1376158856 d:\repos\p_fantasy\game\main_menu\main_menu_list.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/top_level_globals.hpp>
+	<main_menu/main_menu_mp_start/main_menu_mp_start.hpp>
+	<main_menu/main_menu_settings/main_menu_settings.hpp>
+	<main_menu/main_menu_load/main_menu_load.hpp>
+	<main_menu/main_menu/main_menu.hpp>
+
