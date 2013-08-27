@@ -1,0 +1,151 @@
+# depslib dependency file v1.0
+1377426220 source:d:\projects\pony fantasy\main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<game_globals/game_globals.hpp>
+	<graphic/graphic.hpp>
+	<file_utilities/serializeable.hpp>
+	<game_globals/music/musicPlayer.hpp>
+	<game_globals/music/playlist.hpp>
+	<main_menu/main_menu_list.hpp>
+
+1375648966 d:\projects\pony fantasy\game\config.hpp
+
+1375649947 d:\projects\pony fantasy\game\main_menu\main_menu.hpp
+	<iostream>
+	<config/config.hpp>
+
+1375649624 source:d:\projects\pony fantasy\game\main_menu\main_menu.cpp
+	<main_menu/main_menu.hpp>
+
+1375651896 d:\projects\pony fantasy\game\config\config.hpp
+
+1376830813 source:d:\projects\pony fantasy\game\main_menu\main_menu\main_menu.cpp
+	<main_menu/main_menu/main_menu.hpp>
+
+1375732944 d:\projects\pony fantasy\game\main_menu\main_menu\main_menu.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375704598 source:d:\projects\pony fantasy\game\main_menu\main_menu_load\main_menu_load.cpp
+	<main_menu/main_menu_load/main_menu_load.hpp>
+
+1375732944 d:\projects\pony fantasy\game\main_menu\main_menu_load\main_menu_load.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375704915 source:d:\projects\pony fantasy\game\main_menu\main_menu_mp_start\main_menu_mp_start.cpp
+	<main_menu/main_menu_mp_start/main_menu_mp_start.hpp>
+
+1375732944 d:\projects\pony fantasy\game\main_menu\main_menu_mp_start\main_menu_mp_start.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375704712 source:d:\projects\pony fantasy\game\main_menu\main_menu_save\main_menu_save.cpp
+	<main_menu/main_menu_save/main_menu_save.hpp>
+
+1375732944 d:\projects\pony fantasy\game\main_menu\main_menu_save\main_menu_save.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1375705269 source:d:\projects\pony fantasy\game\main_menu\main_menu_settings\main_menu_settings.cpp
+	<main_menu/main_menu_settings/main_menu_settings.hpp>
+
+1375732944 d:\projects\pony fantasy\game\main_menu\main_menu_settings\main_menu_settings.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+
+1376158856 d:\projects\pony fantasy\game\main_menu\main_menu_list.hpp
+	<iostream>
+	<game_globals/config.hpp>
+	<game_globals/top_level_globals.hpp>
+	<main_menu/main_menu_mp_start/main_menu_mp_start.hpp>
+	<main_menu/main_menu_settings/main_menu_settings.hpp>
+	<main_menu/main_menu_load/main_menu_load.hpp>
+	<main_menu/main_menu/main_menu.hpp>
+
+1376830794 d:\projects\pony fantasy\game\game_globals\config.hpp
+	<game_globals/extend.hpp>
+	<game_globals/top_level_globals.hpp>
+
+1376830794 d:\projects\pony fantasy\game\game_globals\extend.hpp
+	<SFML/Graphics.hpp>
+
+1375785040 source:d:\projects\pony fantasy\game\graphic\positioning.cpp
+	<graphic/positioning.hpp>
+
+1375785040 d:\projects\pony fantasy\game\graphic\positioning.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1376758694 d:\projects\pony fantasy\game\game_globals\game_globals.hpp
+	<game_globals/config.hpp>
+	<game_globals/extend.hpp>
+	<game_globals/top_level_globals.hpp>
+	<game_globals/drawer/drawer.hpp>
+	<game_globals/console/console.hpp>
+
+1375785792 d:\projects\pony fantasy\game\graphic\graphic.hpp
+	<graphic/positioning.hpp>
+	<graphic/table.hpp>
+
+1375785797 d:\projects\pony fantasy\game\graphic\table.hpp
+	<SFML/Graphics.hpp>
+
+1375828052 d:\projects\pony fantasy\game\file_utilities\load.hpp
+	<vector>
+	<string>
+	<fstream>
+	<sstream>
+	<SFML/Graphics.hpp>
+
+1375828849 d:\projects\pony fantasy\game\file_utilities\save.hpp
+	<fstream>
+
+1376155445 d:\projects\pony fantasy\game\game_globals\top_level_globals.hpp
+
+1375960681 d:\projects\pony fantasy\game\file_utilities\serializeable.hpp
+	<file_utilities/save.hpp>
+	<file_utilities/load.hpp>
+
+1377361612 d:\projects\pony fantasy\game\game_globals\drawer\drawer.hpp
+	<iostream>
+	<vector>
+	<game_globals/extend.hpp>
+	<game_globals/config.hpp>
+	<graphic/animation/animation.hpp>
+	<game_globals/console/console_data_grabber.hpp>
+	<sstream>
+
+1377362119 d:\projects\pony fantasy\game\game_globals\console\console.hpp
+	<iostream>
+	<string>
+	<sstream>
+	<game_globals/config.hpp>
+	<game_globals/drawer/drawer.hpp>
+	<game_globals/console/console_data_grabber.hpp>
+
+1376830794 d:\projects\pony fantasy\game\graphic\animation\animation.hpp
+	<game_globals/extend.hpp>
+
+1376832158 d:\projects\pony fantasy\game\game_globals\console\console_data_grabber.hpp
+	<iostream>
+	<string>
+
+1377429021 d:\projects\pony fantasy\game\game_globals\music\musicplayer.hpp
+	<string>
+	<iostream>
+	<game_globals/music/playlist.hpp>
+	<SFML/Audio.hpp>
+
+1377429048 d:\projects\pony fantasy\game\game_globals\music\playlist.hpp
+	<SFML/Audio.hpp>
+	<iostream>
+	<string>
+	<vector>
+
