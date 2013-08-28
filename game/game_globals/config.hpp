@@ -71,6 +71,18 @@ namespace game_state
         static options & getOptions() {};
 
 
+        // Audio values
+        const float getAudioVolume() const { return _masterAudioVolume; };
+
+        const float getMusicVolumeValue() const { return _musicVolume * ( _masterAudioVolume / 100 ); };
+        const float getMusicVolumeRatio() const { return getMusicVolumeValue() / 100; };
+
+        const float getEfffectsVolumeValue() const { return _effectsVolume * ( _masterAudioVolume / 100 ); };
+        const float getEfffectsVolumeRatio() const { return getEfffectsVolumeValue() / 100; };
+    private:
+        float _masterAudioVolume = 100.0;
+        float _musicVolume = 100.0;
+        float _effectsVolume = 100.0;
     };
 }
 

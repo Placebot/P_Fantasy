@@ -164,7 +164,7 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1377429739 d:\repos\p_fantasy\game\game_globals\config.hpp
+1377698020 d:\repos\p_fantasy\game\game_globals\config.hpp
 	<game_globals/extend.hpp>
 	<game_globals/top_level_globals.hpp>
 
@@ -260,10 +260,11 @@
 	<sstream>
 	<SFML/Graphics.hpp>
 
-1377606692 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
+1377698208 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
 	<string>
 	<iostream>
 	<game_globals/music/playlist.hpp>
+	<game_globals/config.hpp>
 	<SFML/Audio.hpp>
 
 1377429048 d:\repos\p_fantasy\game\game_globals\music\playlist.hpp
