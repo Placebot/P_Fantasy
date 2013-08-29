@@ -61,11 +61,11 @@ namespace audio
                 {
                     if( _activeSong->getPlayingOffset().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * game_state::options::getOptions().getMusicVolumeRatio() );
+                        _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * game_state::options::getOptions().getMusicVolumeRatio() ) * 10.0 );
                     }
                     else if( _activeSong->getPlayingOffset().asSeconds() - _activeSong->getDuration().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * 10 );
+                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * 10.0 );
                     }
                 }
             }

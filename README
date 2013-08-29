@@ -1,0 +1,19 @@
+Pony Fantasy, an RPG game.
+
+Pre-Alpha version
+0.0-5r
+
+Uses SFML 2.0-x, not the 2.1 version, it might be updated sometime later.
+
+=======================================
+
+Compiling:
+
+If you wish to compile this, you need to code allowing development from http://www.sfml-dev.org/download/sfml/2.0/
+Compile using any compatible C++ compiler, all flags used by SFML are required, 
+refer to a tutorial on http://www.sfml-dev.org to figure it out.
+
+
+Ready-to-run:
+
+An installer will be provided once it's in beta.
