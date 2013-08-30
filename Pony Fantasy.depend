@@ -235,7 +235,7 @@
 	<iostream>
 	<string>
 
-1377605723 d:\repos\p_fantasy\game\game_globals\console\console.hpp
+1377880216 d:\repos\p_fantasy\game\game_globals\console\console.hpp
 	<iostream>
 	<string>
 	<sstream>
@@ -250,7 +250,7 @@
 1375785797 d:\repos\p_fantasy\game\graphic\table.hpp
 	<SFML/Graphics.hpp>
 
-1375960681 d:\repos\p_fantasy\game\file_utilities\serializeable.hpp
+1377877490 d:\repos\p_fantasy\game\file_utilities\serializeable.hpp
 	<file_utilities/save.hpp>
 	<file_utilities/load.hpp>
 
@@ -264,7 +264,7 @@
 	<sstream>
 	<SFML/Graphics.hpp>
 
-1377848126 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
+1377878757 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
 	<string>
 	<iostream>
 	<game_globals/music/playlist.hpp>
@@ -289,8 +289,12 @@
 
 1377848022 d:\repos\p_fantasy\game\game_globals\updateable.hpp
 
-1377854420 d:\repos\p_fantasy\game\game_globals\key_binding\keybind.hpp
+1377878771 d:\repos\p_fantasy\game\game_globals\key_binding\keybind.hpp
 	<iostream>
 	<string>
 	<SFML/Window.hpp>
+	<file_utilities/serializeable.hpp>
+
+1377878771 source:d:\repos\p_fantasy\game\game_globals\key_binding\keybind.cpp
+	<game_globals/key_binding/keybind.hpp>
 

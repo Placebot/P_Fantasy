@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <SFML/Window.hpp>
+#include <file_utilities/serializeable.hpp>
 
 namespace keybinds
 {
@@ -30,7 +31,7 @@ namespace game_state
 
 namespace _private
 {
-    class action_keybinds
+    class action_keybinds : public file::serializeable
     {
         friend class game_state::options;
         action_keybinds() {};
@@ -50,6 +51,11 @@ namespace _private
         };
 
         const keybinds::keybind & getKey( const std::string & action ) { return keys[ _fitKey(action) ]; };
+
+        virtual const bool save( const std::string path ) {};
+        virtual const bool load( const std::string path, bool directFromString = false ) {};
+
+        keybinds::keybind & operator[]( const std::string & action ) { return keys[ _fitKey( action) ]; };
 
         std::vector< keybinds::keybind > keys;
         std::vector< std::string > mapped;

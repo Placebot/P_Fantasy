@@ -10,6 +10,11 @@
 
 #include <SFML/Audio.hpp>
 
+//-----------
+// Shortcuts
+#define AUDIO_MASTER_VOL game_state::options::getOptions().getAudioVolume()
+
+
 
 namespace audio
 {
@@ -63,11 +68,11 @@ namespace audio
                     if( _activeSong->getPlayingOffset().asSeconds() < _fadeout )
                     {
                         _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * game_state::options::getOptions().getMusicVolumeRatio() ) *
-                                               ( game_state::options::getOptions().getAudioVolume() / 10 ) );
+                                               ( AUDIO_MASTER_VOL / 10 ) );
                     }
                     else if( _activeSong->getPlayingOffset().asSeconds() - _activeSong->getDuration().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * ( game_state::options::getOptions().getAudioVolume() / 10 ) );
+                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * ( AUDIO_MASTER_VOL / 10 ) );
                     }
                 }
             }

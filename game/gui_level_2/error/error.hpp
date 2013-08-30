@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include <vector>
-#include <SFML/Graphics.hpp>
 #include <string>
 #include <sstream>
+
+#include <SFML/Graphics.hpp>
+
+#include <game_globals/game_globals.hpp>
 
 namespace gui
 {
@@ -52,15 +55,23 @@ namespace gui
             for( unsigned int i = 0; i < 0; i++ )
                 _sprites[i].setTexture( _textures[i] );
 
+            loaded = true;
             return true;
         };
 
-        void display( const std::string text, const std::string titlePart = "none" )
+        void display( const std::string text, const std::string titlePart = "none", const std::string   )
         {
+            if( loaded )
+            {
+                while( game_state::config::getConfig().getRunning() )
+                {
 
+                }
+            }
         };
 
     private:
+        bool loaded = false;
         std::vector< sf::Texture > _textures;
         std::vector< sf::Sprite > _sprites;
     };

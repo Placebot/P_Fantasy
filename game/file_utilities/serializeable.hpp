@@ -8,14 +8,9 @@ namespace file
 {
     class serializeable
     {
-    private:
-        ~serializeable() {};
-        serializeable() {};
-        serializeable * operator=( const serializeable & ) {};
-        serializeable(const serializeable &) {};
     public:
-        virtual bool save() = 0;
-        virtual bool load( const std::string path, bool directFromString = false ) = 0;
+        virtual const bool save( const std::string path ) = 0;
+        virtual const bool load( const std::string path, bool directFromString = false ) = 0;
     };
 }
 

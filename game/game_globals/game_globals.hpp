@@ -7,5 +7,6 @@
 #include <game_globals/drawer/drawer.hpp>
 #include <game_globals/console/console.hpp>
 #include <game_globals/key_binding/keybind.hpp>
+#include <game_globals/fonts.hpp>
 
 #endif // game_globals_hpp

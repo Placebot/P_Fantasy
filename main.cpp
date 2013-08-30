@@ -2,15 +2,11 @@
 
 #include <SFML/Graphics.hpp>
 #include <game_globals/game_globals.hpp>
-#include <graphic/graphic.hpp>
-#include <file_utilities/serializeable.hpp>
-
-#include <game_globals/music/musicPlayer.hpp>
-#include <game_globals/music/playlist.hpp>
+#include <game_globals/music.hpp>
 
 #include <main_menu/main_menu_list.hpp>
 
-#include <game_globals/key_binding/keybind.hpp>
+
 
 int main()
 {
