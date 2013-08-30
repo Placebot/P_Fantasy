@@ -6,13 +6,14 @@
 
 #include <game_globals/music/playlist.hpp>
 #include <game_globals/config.hpp>
+#include <game_globals/updateable.hpp>
 
 #include <SFML/Audio.hpp>
 
 
 namespace audio
 {
-    class musicPlayer
+    class musicPlayer : public updateable
     {
     private:
         musicPlayer() {};
@@ -25,7 +26,7 @@ namespace audio
 
         void setFadeoutValue( const float secToEnd ) { if( secToEnd != 0 && secToEnd != 0.0 ) _fadeout = secToEnd; };
         const sf::Music::Status getCurrentSongStatus() const { if( _activeSong != NULL ) return _activeSong->getStatus(); };
-        void update()
+        virtual void update()
         {
             if( getCurrentSongStatus() == sf::Music::Stopped )
             {
@@ -61,11 +62,12 @@ namespace audio
                 {
                     if( _activeSong->getPlayingOffset().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * game_state::options::getOptions().getMusicVolumeRatio() ) * 10.0 );
+                        _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * game_state::options::getOptions().getMusicVolumeRatio() ) *
+                                               ( game_state::options::getOptions().getAudioVolume() / 10 ) );
                     }
                     else if( _activeSong->getPlayingOffset().asSeconds() - _activeSong->getDuration().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * 10.0 );
+                        _activeSong->setVolume( ( game_state::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * ( game_state::options::getOptions().getAudioVolume() / 10 ) );
                     }
                 }
             }

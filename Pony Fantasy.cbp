@@ -55,9 +55,11 @@
 		<Unit filename="game/game_globals/drawer/drawer.hpp" />
 		<Unit filename="game/game_globals/extend.hpp" />
 		<Unit filename="game/game_globals/game_globals.hpp" />
+		<Unit filename="game/game_globals/key_binding/keybind.hpp" />
 		<Unit filename="game/game_globals/music/musicPlayer.hpp" />
 		<Unit filename="game/game_globals/music/playlist.hpp" />
 		<Unit filename="game/game_globals/top_level_globals.hpp" />
+		<Unit filename="game/game_globals/updateable.hpp" />
 		<Unit filename="game/graphic/animation/animation.hpp" />
 		<Unit filename="game/graphic/graphic.hpp" />
 		<Unit filename="game/graphic/positioning.cpp" />

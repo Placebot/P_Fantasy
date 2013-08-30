@@ -164,7 +164,7 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1377698020 d:\repos\p_fantasy\game\game_globals\config.hpp
+1377698431 d:\repos\p_fantasy\game\game_globals\config.hpp
 	<game_globals/extend.hpp>
 	<game_globals/top_level_globals.hpp>
 
@@ -198,7 +198,7 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1377426220 source:d:\repos\p_fantasy\main.cpp
+1377849994 source:d:\repos\p_fantasy\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<game_globals/game_globals.hpp>
@@ -207,6 +207,7 @@
 	<game_globals/music/musicPlayer.hpp>
 	<game_globals/music/playlist.hpp>
 	<main_menu/main_menu_list.hpp>
+	<game_globals/key_binding/keybind.hpp>
 
 1376758694 d:\repos\p_fantasy\game\game_globals\game_globals.hpp
 	<game_globals/config.hpp>
@@ -215,7 +216,7 @@
 	<game_globals/drawer/drawer.hpp>
 	<game_globals/console/console.hpp>
 
-1377605723 d:\repos\p_fantasy\game\game_globals\drawer\drawer.hpp
+1377848657 d:\repos\p_fantasy\game\game_globals\drawer\drawer.hpp
 	<iostream>
 	<vector>
 	<game_globals/extend.hpp>
@@ -224,8 +225,9 @@
 	<game_globals/console/console_data_grabber.hpp>
 	<sstream>
 
-1376830794 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
+1377848126 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
 	<game_globals/extend.hpp>
+	<game_globals/updateable.hpp>
 
 1376832158 d:\repos\p_fantasy\game\game_globals\console\console_data_grabber.hpp
 	<iostream>
@@ -260,11 +262,12 @@
 	<sstream>
 	<SFML/Graphics.hpp>
 
-1377698208 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
+1377848126 d:\repos\p_fantasy\game\game_globals\music\musicplayer.hpp
 	<string>
 	<iostream>
 	<game_globals/music/playlist.hpp>
 	<game_globals/config.hpp>
+	<game_globals/updateable.hpp>
 	<SFML/Audio.hpp>
 
 1377429048 d:\repos\p_fantasy\game\game_globals\music\playlist.hpp
@@ -281,4 +284,10 @@
 	<main_menu/main_menu_settings/main_menu_settings.hpp>
 	<main_menu/main_menu_load/main_menu_load.hpp>
 	<main_menu/main_menu/main_menu.hpp>
+
+1377848022 d:\repos\p_fantasy\game\game_globals\updateable.hpp
+
+1377852543 d:\repos\p_fantasy\game\game_globals\key_binding\keybind.hpp
+	<iostream>
+	<string>
 

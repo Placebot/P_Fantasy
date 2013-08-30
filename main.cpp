@@ -10,6 +10,8 @@
 
 #include <main_menu/main_menu_list.hpp>
 
+#include <game_globals/key_binding/keybind.hpp>
+
 int main()
 {
     sf::RenderWindow GameWin;
