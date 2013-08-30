@@ -9,6 +9,9 @@
 #include <SFML/Graphics.hpp>
 
 #include <game_globals/game_globals.hpp>
+#if defined PF_OUTPUT_DEBUG_GAME_CONSOLE
+    #include <game_globals/console/console_data_grabber.hpp>
+#endif
 
 namespace gui
 {
@@ -45,7 +48,12 @@ namespace gui
             }
             catch( bool _error )
             {
-                std::cout << "Could not load /gui_level_2/error files" << std::endl;
+                #if defined PF_OUTPUT_DEBUG_C_CONSOLE
+                    std::cout << "Could not load /gui_level_2/error files" << std::endl;
+                #elif defined PF_OUTPUT_DEBUG_GAME_CONSOLE
+                    console_data_grabber::getDataBank().addLog( "Could not load /gui_level_2/error files" );
+                #endif
+
                 return false;
             }
 

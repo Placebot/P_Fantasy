@@ -12,9 +12,15 @@
     #include <sstream>
 #endif
 
+namespace game_state
+{
+    class config;
+}
+
 class drawer
 {
 private:
+    friend class game_state::config;
     ~drawer() {};
     drawer() {};
     drawer * operator=( const drawer & ) {};
@@ -24,13 +30,13 @@ public:
 
     void push_back( extend::drawable & object ) { toDraw.push_back( &object ); toDrawA.push_back( NULL ); };
     void push_back( animateable & object ) { toDrawA.push_back( &object ); toDraw.push_back( NULL ); };
-    void remove( extend::drawable & object ) { if( toDraw.size() ){ for( unsigned int i = 0; i < toDraw.size(); i++ ){ if( toDraw[i] == &object ) { toDraw.erase( toDraw.begin() + i ); toDrawA.erase( toDrawA.begin() + i ); } } } };
-    void remove( animateable & object ) { if( toDrawA.size() ){ for( unsigned int i = 0; i < toDrawA.size(); i++ ){ if( toDrawA[i] == &object ) { toDraw.erase( toDraw.begin() + i ); toDrawA.erase( toDrawA.begin() + i ); } } } };
+    void remove( extend::drawable & object ) { if( toDraw.size() ){ for( unsigned int i = 0; i < toDraw.size(); i++ ){ if( toDraw[i] == &object ) { toDraw[i] = NULL; toDraw.erase( toDraw.begin() + i ); toDrawA[i] = NULL; toDrawA.erase( toDrawA.begin() + i ); } } } };
+    void remove( animateable & object ) { if( toDrawA.size() ){ for( unsigned int i = 0; i < toDrawA.size(); i++ ){ if( toDrawA[i] == &object ) { toDraw[i] = NULL; toDraw.erase( toDraw.begin() + i ); toDraw[i] = NULL; toDrawA.erase( toDrawA.begin() + i ); } } } };
 
     void push_back_top_queue( extend::drawable & object ) { toDrawTopLevel.push_back( &object ); toDrawATopLevel.push_back( NULL ); };
     void push_back_top_queue( animateable & object ) { toDrawATopLevel.push_back( &object ); toDrawTopLevel.push_back( NULL ); };
-    void remove_top_queue( extend::drawable & object ) { if( toDrawTopLevel.size() ){ for( unsigned int i = 0; i < toDrawTopLevel.size(); i++ ){ if( toDrawTopLevel[i] == &object ) { toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
-    void remove_top_queue( animateable & object ) { if( toDrawATopLevel.size() ){ for( unsigned int i = 0; i < toDrawATopLevel.size(); i++ ){ if( toDrawATopLevel[i] == &object ) { toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
+    void remove_top_queue( extend::drawable & object ) { if( toDrawTopLevel.size() ){ for( unsigned int i = 0; i < toDrawTopLevel.size(); i++ ){ if( toDrawTopLevel[i] == &object ) { toDrawTopLevel[i] = NULL; toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel[i] = NULL; toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
+    void remove_top_queue( animateable & object ) { if( toDrawATopLevel.size() ){ for( unsigned int i = 0; i < toDrawATopLevel.size(); i++ ){ if( toDrawATopLevel[i] == &object ) { toDrawTopLevel[i] = NULL; toDrawTopLevel.erase( toDrawTopLevel.begin() + i ); toDrawATopLevel[i] = NULL; toDrawATopLevel.erase( toDrawATopLevel.begin() + i ); } } } };
 
     void draw()
     {
@@ -76,6 +82,31 @@ public:
         }
     };
 private:
+
+    void clearAll()
+    {
+        if( toDraw.size() )
+        {
+            for( unsigned int i = toDraw.size(); i > 0; i-- )
+            {
+                toDraw[i] = NULL;
+                toDrawA[i] = NULL;
+                toDraw.erase( toDraw.begin() + i );
+                toDrawA.erase( toDrawA.begin() + i );
+            }
+        }
+        if( toDrawTopLevel.size() )
+        {
+            for( unsigned int i = toDrawTopLevel.size(); i > 0; i-- )
+            {
+                toDrawTopLevel[i] = NULL;
+                toDrawATopLevel[i] = NULL;
+                toDrawTopLevel.erase( toDrawTopLevel.begin() + i );
+                toDrawATopLevel.erase( toDrawATopLevel.begin() + i );
+            }
+        }
+    };
+
     std::vector< extend::drawable * > toDraw;
     std::vector< animateable * > toDrawA;
 

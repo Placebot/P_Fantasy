@@ -6,7 +6,7 @@
 
 #include <main_menu/main_menu_list.hpp>
 
-
+#include <resource_bank/resources_menus.hpp>
 
 int main()
 {
@@ -16,7 +16,9 @@ int main()
     game_state::config::getConfig().setGameWindow( GameWin );
     game_state::config::getConfig().setCurrFunc( menu::menuState::getMenu().getFunc() );
 
-    GameWin.display();
+    if( !resource::main_menu_res::getResPack().load() )
+        return -1;
+
     while( game_state::config::getConfig().getRunning() )
     {
         game_state::config::getConfig().runFunc();

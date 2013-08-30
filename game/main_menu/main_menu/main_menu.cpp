@@ -3,6 +3,10 @@
 void main_menu()
 {
     std::cout << "entering" << std::endl;
+
+    MAIN_menu_main::resources Graphics;
+    drawer::getDrawer().push_back( Graphics );
+
     sf::RenderWindow *Win = game_state::config::getConfig().getWindow();
     sf::Clock timer;
     while( game_state::config::getConfig().getRunning() )
@@ -24,7 +28,10 @@ void main_menu()
 
 
 
-
+        drawer::getDrawer().draw();
     }
     std::cout << "exciting" << std::endl;
+
+    drawer::getDrawer().remove( Graphics );
+    std::cout << "here?" << std::endl;
 }

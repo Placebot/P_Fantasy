@@ -78,6 +78,7 @@
 		<Unit filename="game/main_menu/main_menu_mp_start/main_menu_mp_start.hpp" />
 		<Unit filename="game/main_menu/main_menu_settings/main_menu_settings.cpp" />
 		<Unit filename="game/main_menu/main_menu_settings/main_menu_settings.hpp" />
+		<Unit filename="game/resource_bank/resources_menus.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

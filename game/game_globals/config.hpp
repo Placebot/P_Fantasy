@@ -5,6 +5,7 @@
 #include <game_globals/top_level_globals.hpp>
 #include <game_globals/key_binding/keybind.hpp>
 
+
 namespace game_state
 {
     enum state
@@ -51,7 +52,7 @@ namespace game_state
         void changeState( const state newState ) { _gameState = newState; };
         void changeLocation( const location newLocation ) { _playerLocation = newLocation; };
         void setGameWindow( sf::RenderWindow & Win ) { _gameWindow = &Win; };
-        void goOff() { _running = false; if( _gameWindow != NULL ) { _gameWindow->close(); _gameWindow = NULL; } };
+        void goOff() { _running = false; if( _gameWindow != NULL ) { _gameWindow->close(); _gameWindow = NULL; exit(0); } };
         void setCurrFunc( functionPointer & newFunc ) { _currentFunc = newFunc; };
     private:
         state _gameState = main_menu;
