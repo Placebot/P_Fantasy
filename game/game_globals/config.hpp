@@ -3,6 +3,7 @@
 
 #include <game_globals/extend.hpp>
 #include <game_globals/top_level_globals.hpp>
+#include <game_globals/key_binding/keybind.hpp>
 
 namespace game_state
 {
@@ -79,6 +80,8 @@ namespace game_state
 
         const float getEfffectsVolumeValue() const { return _effectsVolume * ( _masterAudioVolume / 100 ); };
         const float getEfffectsVolumeRatio() const { return getEfffectsVolumeValue() / 100; };
+
+        const keybinds::keybind & getKeybind( const std::string & action ) { return _private::action_keybinds::getKeybinds().getKey( action ); };
     private:
         float _masterAudioVolume = 100.0;
         float _musicVolume = 100.0;

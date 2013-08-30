@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <SFML/Window.hpp>
 
 namespace keybinds
 {
@@ -22,14 +23,22 @@ namespace keybinds
     };
 }
 
+namespace game_state
+{
+    class options;
+}
+
 namespace _private
 {
     class action_keybinds
     {
+        friend class game_state::options;
         action_keybinds() {};
         action_keybinds( const action_keybinds & conf ) {};
         action_keybinds * operator=( const action_keybinds & conf ) {};
         ~action_keybinds() {};
+
+        static action_keybinds & getKeybinds() { static action_keybinds instance; return instance; };
 
         unsigned int _fitKey( const std::string & action )
         {
@@ -49,24 +58,7 @@ namespace _private
 
 namespace keybinds
 {
-    const bool checkAction( const keybinds::keybind & k, const sf::Event & e )
-    {
-        // Mouse event
-        if (k.myInputType == MouseInput &&
-            k.myEventType == e.type &&
-            k.myMouseButton == e.mouseButton.button)
-        {
-            return true;
-        }
-        // Keyboard event
-        if (k.myInputType == KeyboardInput &&
-            k.myEventType == e.type &&
-            k.myKeyCode == e.key.code)
-        {
-            return true;
-        }
-        return false;
-    }
+    const bool checkAction( const keybinds::keybind & k, const sf::Event & e );
 }
 
 #endif // keybind_hpp

@@ -6,5 +6,6 @@
 #include <game_globals/top_level_globals.hpp>
 #include <game_globals/drawer/drawer.hpp>
 #include <game_globals/console/console.hpp>
+#include <game_globals/key_binding/keybind.hpp>
 
 #endif // game_globals_hpp

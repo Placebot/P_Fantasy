@@ -164,9 +164,10 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1377698431 d:\repos\p_fantasy\game\game_globals\config.hpp
+1377854248 d:\repos\p_fantasy\game\game_globals\config.hpp
 	<game_globals/extend.hpp>
 	<game_globals/top_level_globals.hpp>
+	<game_globals/key_binding/keybind.hpp>
 
 1376830794 d:\repos\p_fantasy\game\game_globals\extend.hpp
 	<SFML/Graphics.hpp>
@@ -209,12 +210,13 @@
 	<main_menu/main_menu_list.hpp>
 	<game_globals/key_binding/keybind.hpp>
 
-1376758694 d:\repos\p_fantasy\game\game_globals\game_globals.hpp
+1377853179 d:\repos\p_fantasy\game\game_globals\game_globals.hpp
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 	<game_globals/top_level_globals.hpp>
 	<game_globals/drawer/drawer.hpp>
 	<game_globals/console/console.hpp>
+	<game_globals/key_binding/keybind.hpp>
 
 1377848657 d:\repos\p_fantasy\game\game_globals\drawer\drawer.hpp
 	<iostream>
@@ -252,7 +254,7 @@
 	<file_utilities/save.hpp>
 	<file_utilities/load.hpp>
 
-1375828849 d:\repos\p_fantasy\game\file_utilities\save.hpp
+1377853789 d:\repos\p_fantasy\game\file_utilities\save.hpp
 	<fstream>
 
 1377604281 d:\repos\p_fantasy\game\file_utilities\load.hpp
@@ -287,7 +289,8 @@
 
 1377848022 d:\repos\p_fantasy\game\game_globals\updateable.hpp
 
-1377852543 d:\repos\p_fantasy\game\game_globals\key_binding\keybind.hpp
+1377854420 d:\repos\p_fantasy\game\game_globals\key_binding\keybind.hpp
 	<iostream>
 	<string>
+	<SFML/Window.hpp>
 

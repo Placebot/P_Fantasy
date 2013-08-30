@@ -75,7 +75,7 @@ namespace file
                     switch( temp->_type )
                     {
                     case file::_private::TYPE::INT:
-                        out << reinterpret_cast<int*>( temp->_value );
+                        out << *( reinterpret_cast<int*>( temp->_value ) );
                         break;
 
                     case file::_private::TYPE::SHORT_INT:
