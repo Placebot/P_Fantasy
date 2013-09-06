@@ -1,27 +1,27 @@
 #include <iostream>
 
 #include <SFML/Graphics.hpp>
-#include <game_globals/game_globals.hpp>
-#include <game_globals/music.hpp>
+#include <gameGlobals/gameGlobals.hpp>
+#include <gameGlobals/music.hpp>
 
-#include <main_menu/main_menu_list.hpp>
+#include <mainMenu/mainMenuList.hpp>
 
-#include <resource_bank/resources_menus.hpp>
+#include <resourceBank/resourcesMenus.hpp>
 
 int main()
 {
     sf::RenderWindow GameWin;
-    GameWin.create(sf::VideoMode(800, 600, 32), "Pony Fantasy Alpha" );
+    GameWin.create(sf::VideoMode(800, 600, 32), "P_F" );
 
-    game_state::config::getConfig().setGameWindow( GameWin );
-    game_state::config::getConfig().setCurrFunc( menu::menuState::getMenu().getFunc() );
+    gameState::config::getConfig().setGameWindow( GameWin );
+    gameState::config::getConfig().setCurrFunc( menu::menuState::getMenu().getFunc() );
 
-    if( !resource::main_menu_res::getResPack().load() )
+    if( !resource::mainMenuRes::getResPack().load() )
         return -1;
 
-    while( game_state::config::getConfig().getRunning() )
+    while( gameState::config::getConfig().getRunning() )
     {
-        game_state::config::getConfig().runFunc();
+        gameState::config::getConfig().runFunc();
     }
     return 0;
 }

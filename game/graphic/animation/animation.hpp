@@ -1,8 +1,8 @@
 #ifndef animation_hpp
 #define animation_hpp
 
-#include <game_globals/extend.hpp>
-#include <game_globals/updateable.hpp>
+#include <gameGlobals/extend.hpp>
+#include <gameGlobals/updateable.hpp>
 
 class animateable : public extend::drawable, public updateable
 {
