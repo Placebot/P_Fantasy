@@ -8,6 +8,8 @@
 
 #include <resourceBank/resourcesMenus.hpp>
 
+#include <graphic/guiLevel1/button.hpp>
+
 int main()
 {
     sf::RenderWindow GameWin;

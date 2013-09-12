@@ -13,6 +13,7 @@
 //-----------
 // Shortcuts
 #define AUDIO_MASTER_VOL gameState::options::getOptions().getAudioVolume()
+#define AUDIO_MUSIC_RATIO_VOL gameState::options::getOptions().getMusicVolumeRatio()
 
 
 
@@ -67,12 +68,12 @@ namespace audio
                 {
                     if( _activeSong->getPlayingOffset().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * gameState::options::getOptions().getMusicVolumeRatio() ) *
+                        _activeSong->setVolume( ( ( _activeSong->getPlayingOffset().asSeconds() / _fadeout ) * AUDIO_MUSIC_RATIO_VOL ) *
                                                ( AUDIO_MASTER_VOL / 10 ) );
                     }
                     else if( _activeSong->getPlayingOffset().asSeconds() - _activeSong->getDuration().asSeconds() < _fadeout )
                     {
-                        _activeSong->setVolume( ( gameState::options::getOptions().getMusicVolumeRatio() - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) *
+                        _activeSong->setVolume( ( AUDIO_MUSIC_RATIO_VOL - _activeSong->getPlayingOffset().asSeconds() / _fadeout ) *
                                                ( AUDIO_MASTER_VOL / 10 ) );
                     }
                 }
