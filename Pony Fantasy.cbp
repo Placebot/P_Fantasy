@@ -49,6 +49,7 @@
 		<Unit filename="game/fileUtilities/load.hpp" />
 		<Unit filename="game/fileUtilities/save.hpp" />
 		<Unit filename="game/fileUtilities/serializeable.hpp" />
+		<Unit filename="game/gameGlobals/achievementSystem/achievementSystemMain.hpp" />
 		<Unit filename="game/gameGlobals/config.hpp" />
 		<Unit filename="game/gameGlobals/console/console.hpp" />
 		<Unit filename="game/gameGlobals/console/consoleDataGrabber.hpp" />

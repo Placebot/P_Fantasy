@@ -10,6 +10,8 @@
 
 #include <graphic/guiLevel1/button.hpp>
 
+#include <gameGlobals/achievementSystem/achievementSystemMain.hpp>
+
 int main()
 {
     sf::RenderWindow GameWin;
@@ -20,6 +22,8 @@ int main()
 
     if( !resource::mainMenuRes::getResPack().load() )
         return -1;
+
+    std::cout << achievements::systemMain::getAchievementDesc( "TEST" ) << std::endl;
 
     while( gameState::config::getConfig().getRunning() )
     {
