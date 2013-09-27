@@ -8,5 +8,6 @@
 #include <gameGlobals/console/console.hpp>
 #include <gameGlobals/keyBinding/keybind.hpp>
 #include <gameGlobals/fonts.hpp>
+#include <gameGlobals/specialAction/specialAction.hpp>
 
 #endif // game_globals_hpp

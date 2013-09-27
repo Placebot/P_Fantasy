@@ -62,6 +62,7 @@
 		<Unit filename="game/gameGlobals/music.hpp" />
 		<Unit filename="game/gameGlobals/music/musicPlayer.hpp" />
 		<Unit filename="game/gameGlobals/music/playlist.hpp" />
+		<Unit filename="game/gameGlobals/specialAction/specialAction.hpp" />
 		<Unit filename="game/gameGlobals/topLevelGlobals.hpp" />
 		<Unit filename="game/gameGlobals/updateable.hpp" />
 		<Unit filename="game/graphic/animation/animation.hpp" />

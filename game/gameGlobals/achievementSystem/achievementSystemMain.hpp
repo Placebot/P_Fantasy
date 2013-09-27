@@ -2,6 +2,7 @@
 #define achievementSystemMain_hpp
 
 #include <fileUtilities/serializeable.hpp>
+#include <gameGlobals/specialAction/specialAction.hpp>
 
 namespace achievements
 {
@@ -21,9 +22,15 @@ namespace achievements
                 return "TEST_DESCRIPTION";
         };
 
-        void complete( const std::string achievemnt )
+        void complete( const std::string achievement )
         {
 
+        };
+
+        void addNew( const std::string achName, const std::string achDesc )
+        {
+            notCompleted.push_back( achName );
+            notCompletedDesc.push_back( achDesc );
         };
 
         // Derived from file::serializeable
@@ -38,8 +45,23 @@ namespace achievements
         };
 
     private:
+        unsigned int _fitKey( const std::string & key )
+        {
+            for( unsigned int i = 0; i < actionKeys.size(); i++ )
+            {
+                if( key == actionKeys[i] )
+                    return i;
+            }
+        };
+
         std::vector< std::string > completed;
+        std::vector< std::string > completedDesc;
+
+        std::vector< specialAction::action > actions;
+        std::vector< std::string > actionKeys;
+
         std::vector< std::string > notCompleted;
+        std::vector< std::string > notCompletedDesc;
     };
 }
 

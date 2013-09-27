@@ -199,7 +199,7 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1379181696 source:d:\repos\p_fantasy\main.cpp
+1379182884 source:d:\repos\p_fantasy\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<gameGlobals/gameGlobals.hpp>
@@ -343,7 +343,7 @@
 	<gameGlobals/gameGlobals.hpp>
 	<resourceBank/resourcesMenus.hpp>
 
-1378460142 d:\repos\p_fantasy\game\gameglobals\gameglobals.hpp
+1380313908 d:\repos\p_fantasy\game\gameglobals\gameglobals.hpp
 	<gameGlobals/config.hpp>
 	<gameGlobals/extend.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
@@ -351,6 +351,7 @@
 	<gameGlobals/console/console.hpp>
 	<gameGlobals/keyBinding/keybind.hpp>
 	<gameGlobals/fonts.hpp>
+	<gameGlobals/specialAction/specialAction.hpp>
 
 1378460163 d:\repos\p_fantasy\game\gameglobals\config.hpp
 	<gameGlobals/extend.hpp>
@@ -451,6 +452,10 @@
 	<gameGlobals/extend.hpp>
 	<SFML/Graphics.hpp>
 
-1379182281 d:\repos\p_fantasy\game\gameglobals\achievementsystem\achievementsystemmain.hpp
+1380315061 d:\repos\p_fantasy\game\gameglobals\achievementsystem\achievementsystemmain.hpp
 	<fileUtilities/serializeable.hpp>
+	<gameGlobals/specialAction/specialAction.hpp>
+
+1380315078 d:\repos\p_fantasy\game\gameglobals\specialaction\specialaction.hpp
+	<gameGlobals/topLevelGlobals.hpp>
 
