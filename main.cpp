@@ -23,7 +23,7 @@ int main()
     if( !resource::mainMenuRes::getResPack().load() )
         return -1;
 
-    std::cout << achievements::systemMain::getAchievementDesc( "TEST" ) << std::endl;
+
 
     while( gameState::config::getConfig().getRunning() )
     {

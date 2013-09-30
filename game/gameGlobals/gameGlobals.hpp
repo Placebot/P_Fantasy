@@ -8,6 +8,7 @@
 #include <gameGlobals/console/console.hpp>
 #include <gameGlobals/keyBinding/keybind.hpp>
 #include <gameGlobals/fonts.hpp>
-#include <gameGlobals/specialAction/specialAction.hpp>
+#include <gameGlobals/achievementSystem/achievement.hpp>
+#include <gameGlobals/achievementSystem/achievementSystemMain.hpp>
 
 #endif // game_globals_hpp

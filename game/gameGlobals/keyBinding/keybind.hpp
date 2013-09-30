@@ -52,7 +52,7 @@ namespace _private
 
         const keybinds::keybind & getKey( const std::string & action ) { return keys[ _fitKey(action) ]; };
 
-        virtual const bool save( const std::string path ) {};
+        virtual const bool save( const std::string path, unsigned int mode = 0 ) {};
         virtual const bool load( const std::string path, bool directFromString = false ) {};
 
         keybinds::keybind & operator[]( const std::string & action ) { return keys[ _fitKey( action) ]; };

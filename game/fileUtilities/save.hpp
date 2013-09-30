@@ -13,12 +13,14 @@ namespace file
             INT,
             SHORT_INT,
             UNSIGNED_INT,
+            CONST_UNSIGNED_INT,
             LONG_INT,
             LONG_UNSIGNED_INT,
             BOOL,
             FLOAT,
             DOUBLE,
-            LONG_DOUBLE
+            LONG_DOUBLE,
+            STRING
         };
 
         class _data
@@ -33,6 +35,7 @@ namespace file
             _data( float &value, std::string &name ) { _value = &value; _name = &name; _type = FLOAT; };
             _data( double &value, std::string &name ) { _value = &value; _name = &name; _type = DOUBLE; };
             _data( long double &value, std::string &name ) { _value = &value; _name = &name; _type = LONG_DOUBLE; };
+            _data( std::string &value, std::string &name ) { _value = &value; _name = &name; _type = STRING; };
 
             void *_value = NULL;
             const std::string *_name = NULL;
@@ -55,6 +58,7 @@ namespace file
         void addData( float &value, std::string &name ) { ToSave.push_back( new _private::_data( value, name ) ); };
         void addData( double &value, std::string &name ) { ToSave.push_back( new _private::_data( value, name ) ); };
         void addData( long double &value, std::string &name ) { ToSave.push_back( new _private::_data( value, name ) ); };
+        void addData( std::string &value, std::string &name ) { ToSave.push_back( new _private::_data( value, name ) ); };
 
         void clearSaveData() { unsigned int i = ToSave.size(); if( i ){ do { delete ToSave[i]; i--; }while( i < 0 ); } };
         void deleteData( const void *ptrValue ) { for( unsigned int i = 0; i < ToSave.size(); i++){ if( ToSave[i]->_value == ptrValue ) ToSave.erase( ToSave.begin() + i ); } };
@@ -86,6 +90,10 @@ namespace file
                         out << *( reinterpret_cast<unsigned int*>( temp->_value ) );
                         break;
 
+                    case file::_private::TYPE::CONST_UNSIGNED_INT:
+                        out << *( reinterpret_cast< const unsigned int*>( temp->_value ) );
+                        break;
+
                     case file::_private::TYPE::LONG_INT:
                         out << *( reinterpret_cast<long int*>( temp->_value ) );
                         break;
@@ -108,6 +116,10 @@ namespace file
 
                     case file::_private::TYPE::LONG_DOUBLE:
                         out << *( reinterpret_cast<long double*>( temp->_value ) );
+                        break;
+
+                    case file::_private::TYPE::STRING:
+                        out << *( reinterpret_cast<std::string*>(temp->_value ) );
                         break;
                     }
                     out << this->_keyword;

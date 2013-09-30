@@ -9,7 +9,7 @@ namespace file
     class serializeable
     {
     public:
-        virtual const bool save( const std::string path ) = 0;
+        virtual const bool save( const std::string path, unsigned int mode = 0 ) = 0;
         virtual const bool load( const std::string path, bool directFromString = false ) = 0;
     };
 }

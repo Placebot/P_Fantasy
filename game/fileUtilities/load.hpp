@@ -132,9 +132,10 @@ namespace file
         bool getData( float &toSet, std::string name ) const { int i = 0; while( true ){ if( _data_formatted[i] == name ) break; if( i >= _data_formatted.size() ) { i = -1; break; } i++; } if( i == -1 ) return false; else { std::stringstream ss; ss << _data_formatted[i+1]; ss >> toSet; return true; } };
         bool getData( double &toSet, std::string name ) const { int i = 0; while( true ){ if( _data_formatted[i] == name ) break; if( i >= _data_formatted.size() ) { i = -1; break; } i++; } if( i == -1 ) return false; else { std::stringstream ss; ss << _data_formatted[i+1]; ss >> toSet; return true; } };
         bool getData( long double &toSet, std::string name ) const { int i = 0; while( true ){ if( _data_formatted[i] == name ) break; if( i >= _data_formatted.size() ) { i = -1; break; } i++; } if( i == -1 ) return false; else { std::stringstream ss; ss << _data_formatted[i+1]; ss >> toSet; return true; } };
-
+        bool getData( std::string &toSet, std::string name ) const { int i = 0; while( true ){ if( _data_formatted[i] == name ) break; if( i >= _data_formatted.size() ) { i = -1; break; } i++; } if( i == -1 ) return false; else { std::stringstream ss; ss << _data_formatted[i+1]; ss >> toSet; return true; } };
         void setKeychar( const char &keyword ) { _keyword = keyword; };
 
+        unsigned int size() { return _data_formatted.size() / 2; };
         std::vector< std::string > split( std::string str, std::string deliminator) ///! Zeke's code
         {
             std::vector< std::string > tokens;
