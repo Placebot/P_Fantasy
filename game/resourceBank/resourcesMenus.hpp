@@ -22,19 +22,19 @@ namespace resource
         const bool load()
         {
             sf::Texture mainMenuBackground;
-            if( !mainMenuBackground.loadFromFile( "resources/mainMenuBg.png" ) )
+            if( !mainMenuBackground.loadFromFile( "resources/backgrounds/mainMenuBg.png" ) )
                 return false;
 
             sf::Texture mainMenuSettingsBackground;
-            if( !mainMenuSettingsBackground.loadFromFile( "resources/mainMenuStBg.png" ) )
+            if( !mainMenuSettingsBackground.loadFromFile( "resources/backgrounds/mainMenuStBg.png" ) )
                 return false;
 
             sf::Texture mainMenuLoadBackgrond;
-            if( !mainMenuLoadBackgrond.loadFromFile( "resources/mainMenuLdBg.png" ) )
+            if( !mainMenuLoadBackgrond.loadFromFile( "resources/backgrounds/mainMenuLdBg.png" ) )
                 return false;
 
             sf::Texture mainMenuMpBackground;
-            if( !mainMenuMpBackground.loadFromFile( "resources/mainMenuMpBg.png" ) )
+            if( !mainMenuMpBackground.loadFromFile( "resources/backgrounds/mainMenuMpBg.png" ) )
                 return false;
 
             _textures.push_back( mainMenuBackground );

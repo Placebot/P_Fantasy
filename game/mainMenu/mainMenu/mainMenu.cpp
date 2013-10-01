@@ -104,6 +104,11 @@ void mainMenu()
                     }
                 }
 
+                if( sf::Keyboard::isKeyPressed( sf::Keyboard::Key::Return ) )
+                {
+                    ///
+                }
+
             }
 
             if( Event.type == sf::Event::LostFocus )

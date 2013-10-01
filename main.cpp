@@ -23,6 +23,12 @@ int main()
     if( !resource::mainMenuRes::getResPack().load() )
         return -1;
 
+    if( !fonts::getFonts().addFont("regular", "resources/fonts/LiberationSans-Regular.ttf" )
+       //|| !fonts::getFonts().addFont("boldItalic", "resources/fonts/LiberationSans-BoldItalic.tff")
+       || !fonts::getFonts().addFont("italic", "resources/fonts/LiberationSans-Italic.ttf")
+       //|| !fonts::getFonts().addFont("bold", "resources/fonts/LiberationSans-Bold.tff" )
+       )
+        return -1;
 
 
     while( gameState::config::getConfig().getRunning() )

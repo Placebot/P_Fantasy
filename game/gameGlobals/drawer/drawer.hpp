@@ -6,7 +6,7 @@
 #include <gameGlobals/extend.hpp>
 #include <gameGlobals/config.hpp>
 #include <graphic/animation/animation.hpp>
-#include <gameGlobals/console/consoleDataGrabber.hpp>
+#include <gameGlobals/topLevelGlobals.hpp>
 
 #if defined PF_OUTPUT_DEBUG_GAME_CONSOLE
     #include <sstream>

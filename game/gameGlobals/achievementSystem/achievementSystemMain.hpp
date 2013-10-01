@@ -6,7 +6,6 @@
 #include <fileUtilities/serializeable.hpp>
 #include <gameGlobals/achievementSystem/achievement.hpp>
 #include <gameGlobals/topLevelGlobals.hpp>
-#include <gameGlobals/achievementSystem/achievementSystemActions.hpp>
 
 namespace achievements
 {
@@ -52,18 +51,11 @@ namespace achievements
         {
             ///-----------------------
             /// Modes available:
-            /// 0 - default, full save
-            /// 1 - earned state / key, commands instead of function
+            /// 0 - default
             ///
             /// Achievement saving ( 0 )
             /// syntax:
-            /// achievementName;ID;
-            /// achievementDescription;ID;
             /// earned;ID;
-            ///
-            /// Achievement saving ( 1 )
-            /// earned;ID;
-            /// instructionSet;ID;
             ///
             /// function selected by ID
             ///
@@ -78,20 +70,12 @@ namespace achievements
                 {
                     for( unsigned int i = 0; i < _achievements.size(); i++ )
                     {
-                        saver.addData( _achievements[i]._myName, _achievements[i]._myID );
-                        saver.addData( _achievements[i]._myDesc, _achievements[i]._myID );
                         saver.addData( _achievements[i]._earned, _achievements[i]._myID );
                     }
                 }
-                else if( mode == 1 )
-                {
-                    for( unsigned int i = 0; i < _achievements.size(); i++ )
-                    {
-                        saver.addData( _achievements[i]._earned, _achievements[i]._myID );
-                        saver.addData( _achievements[i]._instructionSet, _achievements[i]._myID );
-                    }
-                }
-                std::string temp = "ACH_SAVE_MODE";
+                std::stringstream ss;
+                ss << ACHIEVEMENT_STRING_BEGIN << "_SAVE_MODE";
+                std::string temp = ss.str();
                 saver.addData( mode, temp );
 
                 if( saver.saveToFile( path ) )
@@ -127,60 +111,31 @@ namespace achievements
             }
         };
 
-        void addAchievement( achievements::achievement ach ) { _achievements.push_back( ach ); };
+        const bool addAchievement( achievements::achievement ach )
+        {
+            if( _fitKey( ach._myID, false ) == -1 )
+            {
+                _achievements.push_back( ach );
+                return true;
+            }
+            else
+            {
+                consoleDataGrabber::getDataBank().addLog( "Achievement adding failed. Couldn't add achievement '" + ach._myName + "' with ID '" + ach._myID + "'." );
+                return false;
+            }
+        };
 
         achievements::achievement & operator[]( const std::string & ID ) { return _achievements[ _fitKey(ID, false)]; };
 
     private:
-        const std::string getRest( unsigned int size )
-        {
-            size--;
-            if( size == 0 )
-                return "000";
-            else
-            {
-                std::stringstream ss;
-                std::string result;
-                if( size >= 100 )
-                {
-                    ss << size;
-                    ss >> result;
-                    return result;
-                }
-                else if( size >= 10 )
-                {
-                    ss << size;
-                    ss >> result;
-                    return "0" + result;
-                }
-                else
-                {
-                    ss << size;
-                    ss >> result;
-                    return "00" + result;
-                }
-            }
-        }
-
-        bool checkName( const std::string name )
-        {
-            if( _achievements.size() )
-            {
-                for( unsigned int i = 0; i < _achievements.size(); i++ )
-                    if( name == _achievements[i]._myName )
-                        return true;
-            }
-
-            return false;
-        };
-
-        unsigned int _fitKey( const std::string & key, bool name )
+        int _fitKey( const std::string & key, bool name )
         {
             for( unsigned int i = 0; i < _achievements.size(); i++ )
             {
                 if( key == ( name ? _achievements[i]._myName : _achievements[i]._myID ) )
                     return i;
             }
+            return -1;
         };
 
         std::vector< achievements::achievement > _achievements;

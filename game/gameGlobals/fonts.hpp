@@ -12,21 +12,19 @@ private:
     fonts * operator=( const fonts & ) {};
     fonts(const fonts &) {};
 public:
-    fonts & getFonts() { static fonts instance; return instance; };
+    static fonts & getFonts() { static fonts instance; return instance; };
 
-    sf::Font & getFont( const std::string & key )
+    sf::Font & getFont( const std::string key )
     {
-        static fonts instance;
-        return instance._fonts[ _fitKey( key ) ];
+        return _fonts[ _fitKey( key ) ];
     };
 
-    sf::Font & operator[]( const std::string & key )
+    sf::Font & operator[]( const std::string key )
     {
-        static fonts instance;
-        return instance._fonts[ _fitKey( key ) ];
+        return _fonts[ _fitKey( key ) ];
     };
 
-    bool addFont( const std::string & key, const std::string & path )
+    bool addFont( const std::string key, const std::string path )
     {
         for( unsigned int i = 0; i < _fonts.size(); i++ )
         {
