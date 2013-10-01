@@ -34,35 +34,35 @@ namespace MAINMenuMain
             ///New Game
             options[0].setString( "New Game" );
             options[0].setCharacterSize( charSize );
-            options[0].setPosition( 400.0, 200.0 );
+            options[0].setPosition( 100.0, 530.0 );
             options[0].setColor( sf::Color::Black );
             options[0].setFont( fonts::getFonts().getFont("regular") );
 
             ///Load
             options[1].setString( "Load" );
             options[1].setCharacterSize( charSize );
-            options[1].setPosition( 400.0, 250.0 );
+            options[1].setPosition( 500.0, 530.0 );
             options[1].setColor( sf::Color::Black );
             options[1].setFont( fonts::getFonts().getFont("regular") );
 
             ///Options
             options[2].setString( "Options" );
             options[2].setCharacterSize( charSize );
-            options[2].setPosition( 420.0, 200.0 );
+            options[2].setPosition( 100.0, 550.0 );
             options[2].setColor( sf::Color::Black );
             options[2].setFont( fonts::getFonts().getFont("regular" ) );
 
             ///Multiplayer
             options[3].setString( "Multiplayer" );
             options[3].setCharacterSize( charSize );
-            options[3].setPosition( 420.0, 250.0 );
+            options[3].setPosition( 500.0, 550.0 );
             options[3].setColor( sf::Color::Black );
             options[3].setFont( fonts::getFonts().getFont("regular") );
 
             ///Exit
             options[4].setString( "Exit" );
             options[4].setCharacterSize( charSize );
-            options[4].setPosition( 440.0, 250.0 );
+            options[4].setPosition( 500.0, 570.0 );
             options[4].setColor( sf::Color::Black );
             options[4].setFont( fonts::getFonts().getFont("regular") );
         };
