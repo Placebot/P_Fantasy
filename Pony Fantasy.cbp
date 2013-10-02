@@ -52,6 +52,7 @@
 		<Unit filename="game/gameGlobals/achievementSystem/achievement.hpp" />
 		<Unit filename="game/gameGlobals/achievementSystem/achievementSystemMain.hpp" />
 		<Unit filename="game/gameGlobals/config.hpp" />
+		<Unit filename="game/gameGlobals/console/console.cpp" />
 		<Unit filename="game/gameGlobals/console/console.hpp" />
 		<Unit filename="game/gameGlobals/console/consoleDataGrabber.hpp" />
 		<Unit filename="game/gameGlobals/drawer/drawer.hpp" />
@@ -81,6 +82,7 @@
 		<Unit filename="game/mainMenu/mainMenuSettings/mainMenuSettings.hpp" />
 		<Unit filename="game/mainMenu/mainMenu/mainMenu.cpp" />
 		<Unit filename="game/mainMenu/mainMenu/mainMenu.hpp" />
+		<Unit filename="game/resourceBank/resourcesConsole.hpp" />
 		<Unit filename="game/resourceBank/resourcesMenus.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

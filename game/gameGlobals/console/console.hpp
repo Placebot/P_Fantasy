@@ -8,6 +8,10 @@
 #include <gameGlobals/drawer/drawer.hpp>
 #include <gameGlobals/console/consoleDataGrabber.hpp>
 
+#include <gameGlobals/extend.hpp>
+
+#include <resourceBank/resourcesConsole.hpp>
+
 namespace console
 {
     class windowConsole;
@@ -37,6 +41,43 @@ namespace _private
 
 namespace console
 {
+    void consoleActivation( sf::Event & event );
+
+    class resources : public extend::drawable
+    {
+    public:
+        resources()
+        {
+
+        };
+        ~resources() {};
+
+        sf::Sprite & getSprite( const std::string & key ) { return _sprites[ _fitKey( key ) ]; };
+        sf::Text & operator[]( unsigned int & i ) { return _texts[i]; };
+
+        void update( std::string writing )
+        {
+            _writingAtm.setString( writing );
+        };
+
+    private:
+
+        unsigned int _fitKey( const std::string & key )
+        {
+            for( unsigned int i = 0; i < _keys_spr.size(); i++ )
+            {
+                if( key == _keys_spr[i] )
+                    return i;
+            }
+        };
+
+        std::vector< sf::Sprite > _sprites;
+        std::vector< std::string > _keys_spr;
+
+        std::vector< sf::Text > _texts;
+        sf::Text _writingAtm;
+    };
+
     class windowConsole
     {
     private:
@@ -49,12 +90,12 @@ namespace console
 
         void boot()
         {
-            startup();
+
             bool exit = false;
             sf::RenderWindow *Win = gameState::config::getConfig().getWindow();
             sf::Clock timer;
             std::string command;
-            while( gameState::config::getConfig().getRunning() )
+            while( gameState::config::getConfig().getRunning() && !exit )
             {
                 sf::Event Event;
                 while( Win->pollEvent( Event ) )
@@ -89,11 +130,7 @@ namespace console
                     }
                 }
 
-                if( exit )
-                {
-                    cleanup();
-                    break;
-                }
+
 
                 std::cout << "poll finished" << std::endl;
                 if( timer.getElapsedTime().asSeconds() > 5 )
@@ -114,16 +151,6 @@ namespace console
 
 
             logs.push_back( result );
-        };
-
-        void cleanup()
-        {
-
-        };
-
-        void startup()
-        {
-            sf::RenderWindow * Win = gameState::config::getConfig().getWindow();
         };
 
         std::vector< std::string > logs;

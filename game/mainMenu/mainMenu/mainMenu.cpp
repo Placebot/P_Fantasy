@@ -37,7 +37,7 @@ void mainMenu()
     std::cout << "entering" << std::endl;
 
     MAINMenuMain::resources Graphics;
-    drawer::getDrawer().push_back( Graphics );
+    drawer::getDrawer().push_back( Graphics, drawer::normal );
 
     sf::RenderWindow *Win = gameState::config::getConfig().getWindow();
     sf::Clock timer;
@@ -51,6 +51,7 @@ void mainMenu()
         sf::Event Event;
         while( Win->pollEvent( Event ) )
         {
+            console::consoleActivation( Event );
             if( Event.type == sf::Event::Closed )
                 gameState::config::getConfig().goOff();
 
@@ -103,12 +104,6 @@ void mainMenu()
                         break;
                     }
                 }
-
-                if( sf::Keyboard::isKeyPressed( sf::Keyboard::Key::Return ) )
-                {
-                    ///
-                }
-
             }
 
             if( Event.type == sf::Event::LostFocus )
@@ -136,6 +131,6 @@ void mainMenu()
     }
     std::cout << "exciting" << std::endl;
 
-    drawer::getDrawer().remove( Graphics );
+    drawer::getDrawer().remove( Graphics, drawer::normal );
     std::cout << "here?" << std::endl;
 }

@@ -40,34 +40,22 @@ namespace resource
             _textures.push_back( mainMenuBackground );
             _keys.push_back( "mainMenuBackground" );
 
-
             _textures.push_back( mainMenuSettingsBackground );
             _keys.push_back( "mainMenuSettingsBackground" );
-            _putBool();
 
             _textures.push_back( mainMenuLoadBackgrond );
             _keys.push_back( "mainMenuLoadMackground" );
-            _putBool();
 
             _textures.push_back( mainMenuMpBackground );
             _keys.push_back( "mainMenuMpBackground" );
-            _putBool();
 
-            initialized = true;
+            _initialized = true;
             return true;
         };
 
-        sf::Texture & operator[]( const std::string & key ) { if( initialized == true ) return _textures[ _fitKey(key) ]; };
-        const bool getLocked( const std::string & key ) { if( initialized == true ) { return _locked[ _fitKey( key ) ]; } else return false; };
+        sf::Texture & operator[]( const std::string & key ) { if( _initialized ) return _textures[ _fitKey(key) ]; };
 
     private:
-
-        void _putBool()
-        {
-            bool poot = false;
-            _locked.push_back( poot );
-        }
-
         unsigned int _fitKey( const std::string & key )
         {
             for( unsigned int i = 0; i < _textures.size(); i++ )
@@ -79,9 +67,8 @@ namespace resource
 
         std::vector< sf::Texture > _textures;
         std::vector< std::string > _keys;
-        std::vector< bool > _locked;
 
-        bool initialized = false;
+        bool _initialized = false;
     };
 }
 
