@@ -91,6 +91,10 @@ void mainMenu()
                 {
                     switch( currentChoice )
                     {
+                    case MAINMenuMain::possibleChoices::_nothing:
+                        currentChoice = MAINMenuMain::possibleChoices::_new;
+                        break;
+
                     case MAINMenuMain::possibleChoices::_new:
                         currentChoice = MAINMenuMain::possibleChoices::_options;
                         break;
@@ -104,6 +108,20 @@ void mainMenu()
                         break;
                     }
                 }
+            }
+
+            if( Event.type == sf::Event::MouseMoved )
+            { //"newGame", "load", "options", "multiplayer", "exit"
+                if( Graphics.getText("newGame").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                    currentChoice = MAINMenuMain::possibleChoices::_new;
+                else if( Graphics.getText("load").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                    currentChoice = MAINMenuMain::possibleChoices::_load;
+                else if( Graphics.getText("options").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                    currentChoice = MAINMenuMain::possibleChoices::_options;
+                else if( Graphics.getText("multiplayer").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                    currentChoice = MAINMenuMain::possibleChoices::_multiplayer;
+                else if( Graphics.getText("exit").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                    currentChoice = MAINMenuMain::possibleChoices::_exit;
             }
 
             if( Event.type == sf::Event::LostFocus )

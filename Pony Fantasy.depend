@@ -227,7 +227,7 @@
 	<game_globals/console/console_data_grabber.hpp>
 	<sstream>
 
-1378460142 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
+1381321040 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
 	<gameGlobals/extend.hpp>
 	<gameGlobals/updateable.hpp>
 
@@ -335,7 +335,7 @@
 	<sstream>
 	<SFML/Graphics.hpp>
 
-1380637553 source:d:\repos\p_fantasy\game\mainmenu\mainmenu\mainmenu.cpp
+1380830659 source:d:\repos\p_fantasy\game\mainmenu\mainmenu\mainmenu.cpp
 	<mainMenu/mainMenu/mainMenu.hpp>
 
 1380638876 d:\repos\p_fantasy\game\mainmenu\mainmenu\mainmenu.hpp
@@ -363,14 +363,14 @@
 	<SFML/Graphics.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
 
-1380633496 d:\repos\p_fantasy\game\gameglobals\toplevelglobals.hpp
+1381320482 d:\repos\p_fantasy\game\gameglobals\toplevelglobals.hpp
 	<gameGlobals/console/consoleDataGrabber.hpp>
 
 1380633859 d:\repos\p_fantasy\game\gameglobals\console\consoledatagrabber.hpp
 	<iostream>
 	<string>
 
-1380633612 d:\repos\p_fantasy\game\gameglobals\drawer\drawer.hpp
+1381323318 d:\repos\p_fantasy\game\gameglobals\drawer\drawer.hpp
 	<iostream>
 	<vector>
 	<gameGlobals/extend.hpp>
@@ -381,19 +381,21 @@
 
 1377848022 d:\repos\p_fantasy\game\gameglobals\updateable.hpp
 
-1378460202 d:\repos\p_fantasy\game\gameglobals\console\console.hpp
+1381324199 d:\repos\p_fantasy\game\gameglobals\console\console.hpp
 	<iostream>
 	<string>
 	<sstream>
 	<gameGlobals/config.hpp>
 	<gameGlobals/drawer/drawer.hpp>
 	<gameGlobals/console/consoleDataGrabber.hpp>
+	<gameGlobals/extend.hpp>
+	<resourceBank/resourcesConsole.hpp>
 
 1380636452 d:\repos\p_fantasy\game\gameglobals\fonts.hpp
 	<vector>
 	<string>
 
-1380635000 d:\repos\p_fantasy\game\resourcebank\resourcesmenus.hpp
+1381321501 d:\repos\p_fantasy\game\resourcebank\resourcesmenus.hpp
 	<iostream>
 	<vector>
 	<string>
@@ -468,4 +470,8 @@
 
 1380632806 d:\repos\p_fantasy\game\gameglobals\achievementsystem\achievementsystemactions.hpp
 	<gameGlobals/topLevelGlobals.hpp>
+
+1381321501 d:\repos\p_fantasy\game\resourcebank\resourcesconsole.hpp
+	<vector>
+	<string>
 
