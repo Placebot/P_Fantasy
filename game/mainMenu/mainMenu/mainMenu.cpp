@@ -112,16 +112,18 @@ void mainMenu()
 
             if( Event.type == sf::Event::MouseMoved )
             { //"newGame", "load", "options", "multiplayer", "exit"
-                if( Graphics.getText("newGame").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                if( Graphics.getText("newGame").getGlobalBounds().contains( sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).x, sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).y ) )
                     currentChoice = MAINMenuMain::possibleChoices::_new;
-                else if( Graphics.getText("load").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                else if( Graphics.getText("load").getGlobalBounds().contains( sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).x, sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).y ) )
                     currentChoice = MAINMenuMain::possibleChoices::_load;
-                else if( Graphics.getText("options").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                else if( Graphics.getText("options").getGlobalBounds().contains( sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).x, sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).y ) )
                     currentChoice = MAINMenuMain::possibleChoices::_options;
-                else if( Graphics.getText("multiplayer").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                else if( Graphics.getText("multiplayer").getGlobalBounds().contains( sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).x, sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).y ) )
                     currentChoice = MAINMenuMain::possibleChoices::_multiplayer;
-                else if( Graphics.getText("exit").getGlobalBounds().contains( sf::Mouse::getPosition().x, sf::Mouse::getPosition().y ) )
+                else if( Graphics.getText("exit").getGlobalBounds().contains( sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).x, sf::Mouse::getPosition( *gameState::config::getConfig().getWindow() ).y ) )
                     currentChoice = MAINMenuMain::possibleChoices::_exit;
+                else
+                    currentChoice = MAINMenuMain::possibleChoices::_nothing;
             }
 
             if( Event.type == sf::Event::LostFocus )
