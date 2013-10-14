@@ -73,17 +73,6 @@
 		<Unit filename="game/graphic/positioning.cpp" />
 		<Unit filename="game/graphic/positioning.hpp" />
 		<Unit filename="game/graphic/table.hpp" />
-		<Unit filename="game/mainMenu/mainMenuList.hpp" />
-		<Unit filename="game/mainMenu/mainMenuLoad/mainMenuLoad.cpp" />
-		<Unit filename="game/mainMenu/mainMenuLoad/mainMenuLoad.hpp" />
-		<Unit filename="game/mainMenu/mainMenuMpStart/mainMenuMpStart.cpp" />
-		<Unit filename="game/mainMenu/mainMenuMpStart/mainMenuMpStart.hpp" />
-		<Unit filename="game/mainMenu/mainMenuSettings/mainMenuSettings.cpp" />
-		<Unit filename="game/mainMenu/mainMenuSettings/mainMenuSettings.hpp" />
-		<Unit filename="game/mainMenu/mainMenu/mainMenu.cpp" />
-		<Unit filename="game/mainMenu/mainMenu/mainMenu.hpp" />
-		<Unit filename="game/resourceBank/resourcesConsole.hpp" />
-		<Unit filename="game/resourceBank/resourcesMenus.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

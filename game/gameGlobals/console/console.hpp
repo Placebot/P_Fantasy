@@ -10,7 +10,6 @@
 
 #include <gameGlobals/extend.hpp>
 
-#include <resourceBank/resourcesConsole.hpp>
 
 namespace console
 {
@@ -23,60 +22,75 @@ namespace _private
     {
     friend class console::windowConsole;
 
+    windowConsoleBackGround()
+    {
+        _me.setFillColor( sf::Color(0,0,0,150) );
+        _me.setSize( sf::Vector2f( 400, 300) );
+        _me.setPosition(0.0,0.0);
+    };
+
+    ~windowConsoleBackGround() {};
+
+    void hide()
+    {
+        _me.setPosition(-400.0,-300.0);
+    };
+
+    void show()
+    {
+        _me.setPosition(0.0,0.0);
+    }
+
     virtual void draw( sf::RenderWindow &Win )
     {
         if( activated )
             Win.draw( _me );
     };
-    void load()
+
+    sf::RectangleShape _me;
+    bool activated = false;
+    };
+
+    class drawableLogs : public extend::drawable
+    {
+    friend class console::windowConsole;
+
+    drawableLogs()
     {
 
     };
 
-    sf::Sprite _me;
-    sf::Texture _meT;
-    bool activated = false;
+    ~drawableLogs()
+    {
+
+    };
+
+    void updateLogs()
+    {
+
+    };
+
+    void updatePositions()
+    {
+
+    };
+
+    virtual void draw( sf::RenderWindow & Win )
+    {
+        for( unsigned int i = 0; i < _logs.size(); i++ )
+        {
+            Win.draw( _logs[i] );
+        }
+    };
+
+    std::vector< sf::Text > _logs;
+
     };
 }
 
 namespace console
 {
     void consoleActivation( sf::Event & event );
-
-    class resources : public extend::drawable
-    {
-    public:
-        resources()
-        {
-
-        };
-        ~resources() {};
-
-        sf::Sprite & getSprite( const std::string & key ) { return _sprites[ _fitKey( key ) ]; };
-        sf::Text & operator[]( unsigned int & i ) { return _texts[i]; };
-
-        void update( std::string writing )
-        {
-            _writingAtm.setString( writing );
-        };
-
-    private:
-
-        unsigned int _fitKey( const std::string & key )
-        {
-            for( unsigned int i = 0; i < _keys_spr.size(); i++ )
-            {
-                if( key == _keys_spr[i] )
-                    return i;
-            }
-        };
-
-        std::vector< sf::Sprite > _sprites;
-        std::vector< std::string > _keys_spr;
-
-        std::vector< sf::Text > _texts;
-        sf::Text _writingAtm;
-    };
 
     class windowConsole
     {
@@ -90,9 +104,11 @@ namespace console
 
         void boot()
         {
-
             bool exit = false;
             sf::RenderWindow *Win = gameState::config::getConfig().getWindow();
+
+            drawer::getDrawer().push_back( _bg, drawer::console );
+
             sf::Clock timer;
             std::string command;
             while( gameState::config::getConfig().getRunning() && !exit )
