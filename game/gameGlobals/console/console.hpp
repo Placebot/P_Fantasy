@@ -10,7 +10,6 @@
 
 #include <gameGlobals/extend.hpp>
 
-
 namespace console
 {
     class windowConsole;
@@ -18,9 +17,11 @@ namespace console
 
 namespace _private
 {
+    class drawableLogs;
     class windowConsoleBackGround : public extend::drawable
     {
     friend class console::windowConsole;
+    friend class _private::drawableLogs;
 
     windowConsoleBackGround()
     {
@@ -33,7 +34,7 @@ namespace _private
 
     void hide()
     {
-        _me.setPosition(-400.0,-300.0);
+        _me.setPosition(0.0,-300.0);
     };
 
     void show()
@@ -43,36 +44,56 @@ namespace _private
 
     virtual void draw( sf::RenderWindow &Win )
     {
-        if( activated )
-            Win.draw( _me );
+        Win.draw( _me );
     };
 
     sf::RectangleShape _me;
-    bool activated = false;
     };
 
     class drawableLogs : public extend::drawable
     {
     friend class console::windowConsole;
 
-    drawableLogs()
-    {
+    drawableLogs() {};
 
+    ~drawableLogs() { _bg = NULL; };
+
+    void setUp( std::vector< std::string > logs, windowConsoleBackGround & bg )
+    {
+        _bg = &bg;
+        updateLogs( logs );
     };
 
-    ~drawableLogs()
+    void updateLogs( std::vector< std::string > logs )
     {
+        std::vector< sf::Text > newLogs;
 
-    };
+        for( unsigned int i = 0; i < logs.size(); i++ )
+        {
+            newLogs[i].setString( logs[i] );
+            newLogs[i].setCharacterSize( gameState::options::getOptions().getConsoleFontSize() );
+            newLogs[i].setColor( sf::Color::Black );
+        }
 
-    void updateLogs()
-    {
-
+        _logs.insert( _logs.end(), newLogs.begin(), newLogs.end() );
     };
 
     void updatePositions()
     {
-
+        if( _bg->_me.getGlobalBounds().left == 0.0 && _bg->_me.getGlobalBounds().top == 0.0 )
+        {
+            float offsetY = _logs[0].getGlobalBounds().height;
+            for( unsigned int i = _logs.size()-1; i > -1; i-- )
+            {
+                _logs[i].setPosition( 0.0, 300.0 - offsetY );
+                offsetY = offsetY + _logs[0].getGlobalBounds().height;
+            }
+        }
+        else
+        {
+            for( unsigned int i = 0; i < _logs.size(); i++ )
+                _logs[i].setPosition( -100.0, -100.0 );
+        }
     };
 
     virtual void draw( sf::RenderWindow & Win )
@@ -84,7 +105,7 @@ namespace _private
     };
 
     std::vector< sf::Text > _logs;
-
+    windowConsoleBackGround * _bg = NULL;
     };
 }
 
@@ -96,7 +117,7 @@ namespace console
     {
     private:
         ~windowConsole() {};
-        windowConsole() {};
+        windowConsole() { _logs.setUp( consoleDataGrabber::getDataBank().logs, _bg ); };
         windowConsole * operator=( const windowConsole & ) {};
         windowConsole(const windowConsole &) {};
     public:
@@ -166,10 +187,10 @@ namespace console
 
 
 
-            logs.push_back( result );
+
         };
 
-        std::vector< std::string > logs;
+        _private::drawableLogs _logs;
         _private::windowConsoleBackGround _bg;
     };
 

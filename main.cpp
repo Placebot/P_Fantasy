@@ -4,7 +4,7 @@
 #include <gameGlobals/gameGlobals.hpp>
 #include <gameGlobals/music.hpp>
 
-#include <graphic/guiLevel1/button.hpp>
+#include <graphic/graphic.hpp>
 
 #include <gameGlobals/achievementSystem/achievementSystemMain.hpp>
 

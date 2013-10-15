@@ -67,11 +67,12 @@
 		<Unit filename="game/gameGlobals/topLevelGlobals.hpp" />
 		<Unit filename="game/gameGlobals/updateable.hpp" />
 		<Unit filename="game/graphic/animation/animation.hpp" />
+		<Unit filename="game/graphic/button.hpp" />
+		<Unit filename="game/graphic/error.hpp" />
 		<Unit filename="game/graphic/graphic.hpp" />
-		<Unit filename="game/graphic/guiLevel1/button.hpp" />
-		<Unit filename="game/graphic/guiLevel2/error/error.hpp" />
 		<Unit filename="game/graphic/positioning.cpp" />
 		<Unit filename="game/graphic/positioning.hpp" />
+		<Unit filename="game/graphic/resizeable.hpp" />
 		<Unit filename="game/graphic/table.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

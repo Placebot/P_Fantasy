@@ -49,14 +49,27 @@ namespace gameState
         const float getMusicVolumeValue() const { return _musicVolume * ( _masterAudioVolume / 100 ); };
         const float getMusicVolumeRatio() const { return getMusicVolumeValue() / 100; };
 
-        const float getEfffectsVolumeValue() const { return _effectsVolume * ( _masterAudioVolume / 100 ); };
-        const float getEfffectsVolumeRatio() const { return getEfffectsVolumeValue() / 100; };
+        const float getEffectsVolumeValue() const { return _effectsVolume * ( _masterAudioVolume / 100 ); };
+        const float getEffectsVolumeRatio() const { return getEffectsVolumeValue() / 100; };
+
+        void setAudioVolume( float audio ) { _masterAudioVolume = audio; };
+
+        void setMusicVolume( float audio ) { _musicVolume = audio; };
+
+        void setEffectsVolume( float audio ) { _musicVolume = audio; };
 
         const keybinds::keybind & getKeybind( const std::string & action ) { return _private::actionKeybinds::getKeybinds().getKey( action ); };
+
+        const unsigned int getConsoleFontSize() { return _consoleFontSize; };
+
+        void setConsoleFontSize( unsigned int size ) { _consoleFontSize = size; };
+
     private:
         float _masterAudioVolume = 100.0;
         float _musicVolume = 100.0;
         float _effectsVolume = 100.0;
+
+        float _consoleFontSize = 16;
     };
 }
 

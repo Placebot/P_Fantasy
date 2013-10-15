@@ -3,11 +3,14 @@
 
 #include <iostream>
 #include <string>
+namespace console
+{
+    class windowConsole;
+}
 
-class windowConsole;
 class consoleDataGrabber
 {
-    friend class windowConsole;
+    friend class console::windowConsole;
 private:
     consoleDataGrabber() {};
     consoleDataGrabber( const consoleDataGrabber & conf ) {};
@@ -22,7 +25,6 @@ private:
     void removeLog( const unsigned int i ) { logs.erase( logs.begin() + i ); };
     void removeAll() { for( unsigned int i = 0; i < logs.size(); i++ ) logs.erase( logs.begin() + i ); };
 
-    std::vector< std::string > & getLogs() { return logs; };
     std::vector< std::string > logs;
 };
 
