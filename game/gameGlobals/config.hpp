@@ -21,7 +21,7 @@ namespace gameState
         const volatile bool & getRunning() const { return _running; };
         sf::RenderWindow * getWindow() { return _gameWindow; };
         functionPointer getCurrFunc() { return _currentFunc; };
-        void runFunc() { if( _currentFunc != NULL ) _currentFunc(); else std::cout << "Can't run. Function set to NULL" << std::endl; };
+        bool runFunc() { if( _currentFunc != NULL ) { _currentFunc(); return true; } else return false; };
 
         void setGameWindow( sf::RenderWindow & Win ) { _gameWindow = &Win; };
         void goOff() { _running = false; if( _gameWindow != NULL ) { _gameWindow->close(); _gameWindow = NULL; exit(0); } };

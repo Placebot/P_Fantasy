@@ -225,9 +225,12 @@
 	<game_globals/console/console_data_grabber.hpp>
 	<sstream>
 
-1381321040 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
+1382098683 d:\repos\p_fantasy\game\graphic\animation\animation.hpp
 	<gameGlobals/extend.hpp>
 	<gameGlobals/updateable.hpp>
+	<gameGlobals/status.hpp>
+	<graphic/animation/animationClock.hpp>
+	<graphic/animation/frame.hpp>
 
 1376832158 d:\repos\p_fantasy\game\game_globals\console\console_data_grabber.hpp
 	<iostream>
@@ -357,7 +360,7 @@
 	<gameGlobals/achievementSystem/achievement.hpp>
 	<gameGlobals/achievementSystem/achievementSystemMain.hpp>
 
-1381862691 d:\repos\p_fantasy\game\gameglobals\config.hpp
+1382099261 d:\repos\p_fantasy\game\gameglobals\config.hpp
 	<gameGlobals/extend.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
 	<gameGlobals/keyBinding/keybind.hpp>
@@ -366,8 +369,7 @@
 	<SFML/Graphics.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
 
-1381320482 d:\repos\p_fantasy\game\gameglobals\toplevelglobals.hpp
-	<gameGlobals/console/consoleDataGrabber.hpp>
+1382099035 d:\repos\p_fantasy\game\gameglobals\toplevelglobals.hpp
 
 1381862989 d:\repos\p_fantasy\game\gameglobals\console\consoledatagrabber.hpp
 	<iostream>
@@ -495,7 +497,7 @@
 	<gameGlobals/extend.hpp>
 	<SFML/Graphics.hpp>
 
-1381856538 d:\repos\p_fantasy\game\graphic\error.hpp
+1382099601 d:\repos\p_fantasy\game\graphic\error.hpp
 	<iostream>
 	<vector>
 	<string>
@@ -503,4 +505,14 @@
 	<SFML/Graphics.hpp>
 	<gameGlobals/gameGlobals.hpp>
 	<gameGlobals/console/consoleDataGrabber.hpp>
+	<graphic/animation/animation.hpp>
+	<gameGlobals/extend.hpp>
+
+1382096024 d:\repos\p_fantasy\game\gameglobals\status.hpp
+
+1382098027 d:\repos\p_fantasy\game\graphic\animation\animationclock.hpp
+	<SFML/System/Clock.hpp>
+	<gameGlobals/status.hpp>
+
+1382098694 d:\repos\p_fantasy\game\graphic\animation\frame.hpp
 
