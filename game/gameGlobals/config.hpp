@@ -26,6 +26,8 @@ namespace gameState
         void setGameWindow( sf::RenderWindow & Win ) { _gameWindow = &Win; };
         void goOff() { _running = false; if( _gameWindow != NULL ) { _gameWindow->close(); _gameWindow = NULL; exit(0); } };
         void setCurrFunc( functionPointer & newFunc ) { _currentFunc = newFunc; };
+
+        const sf::FloatRect getWindowRectangle() const { if( _gameWindow != NULL ) return sf::FloatRect( 0.0, 0.0, _gameWindow->getSize().x, _gameWindow->getSize().y ); else return sf::FloatRect(); };
     private:
         volatile bool _running = true;
         sf::RenderWindow * _gameWindow = NULL;

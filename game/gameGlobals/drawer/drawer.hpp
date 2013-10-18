@@ -180,7 +180,7 @@ public:
 
     void draw()
     {
-        if( toDraw.size() )
+        if( toDraw.size() || toDrawTopLevel.size() || toDrawConsoleLevel.size() )
         {
             #if defined(PF_OUTPUT_DEBUG_C_CONSOLE) || defined(PF_OUTPUT_DEBUG_GAME_CONSOLE)
                 sf::Clock DrawTime;

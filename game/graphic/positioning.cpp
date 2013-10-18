@@ -110,5 +110,5 @@ namespace graphic
         }
 
         return toReturn;
-    };
+    }
 }

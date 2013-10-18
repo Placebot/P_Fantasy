@@ -6,4 +6,6 @@
 
 typedef void (* functionPointer)();
 
+#define GET_WINDOW_RECTANGLE gameState::config::getConfig().getWindowRectangle()
+
 #endif // top_level_globals_hpp

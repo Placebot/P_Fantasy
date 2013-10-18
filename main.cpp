@@ -25,7 +25,8 @@ int main()
 
     while( gameState::config::getConfig().getRunning() )
     {
-        gameState::config::getConfig().runFunc();
+        if( !gameState::config::getConfig().runFunc() )
+            gui::error::getError().occured( "Couldn't find a function to run!" );
     }
     return 0;
 }
