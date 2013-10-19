@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="game\gameGlobals\topLevelGlobals.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="258" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\resizeable.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="226" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\gameGlobals\updateable.hpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="124" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\table.hpp" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="68" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\animation\animation.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="443" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="813" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\animation\animationClock.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="703" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\animation\frame.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="412" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="game\fileUtilities\load.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="8056" topLine="126" />
@@ -51,9 +11,29 @@
 			<Cursor1 position="2198" topLine="41" />
 		</Cursor>
 	</File>
+	<File name="game\graphic\error.hpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="919" topLine="56" />
+		</Cursor>
+	</File>
 	<File name="game\fileUtilities\serializeable.hpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="249" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\graphic.hpp" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="153" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\positioning.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3345" topLine="90" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\positioning.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="503" topLine="3" />
 		</Cursor>
 	</File>
 	<File name="game\gameGlobals\achievementSystem\achievement.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -61,14 +41,29 @@
 			<Cursor1 position="1411" topLine="11" />
 		</Cursor>
 	</File>
+	<File name="game\graphic\resizeable.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="226" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="game\gameGlobals\achievementSystem\achievementSystemMain.hpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1602" topLine="48" />
 		</Cursor>
 	</File>
+	<File name="game\graphic\table.hpp" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="68" topLine="28" />
+		</Cursor>
+	</File>
 	<File name="game\gameGlobals\config.hpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="572" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="813" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="game\gameGlobals\console\console.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -121,24 +116,9 @@
 			<Cursor1 position="152" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game\graphic\error.hpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="919" topLine="56" />
-		</Cursor>
-	</File>
 	<File name="game\gameGlobals\music\musicPlayer.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2655" topLine="57" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\graphic.hpp" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="153" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\graphic\positioning.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3345" topLine="90" />
 		</Cursor>
 	</File>
 	<File name="game\gameGlobals\status.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -146,9 +126,29 @@
 			<Cursor1 position="102" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game\graphic\positioning.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\gameGlobals\topLevelGlobals.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="503" topLine="3" />
+			<Cursor1 position="258" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\gameGlobals\updateable.hpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="124" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\animation\animation.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="443" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\animation\animationClock.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="703" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\graphic\animation\frame.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="412" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
