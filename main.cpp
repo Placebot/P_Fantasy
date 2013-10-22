@@ -6,7 +6,6 @@
 
 #include <graphic/graphic.hpp>
 
-#include <gameGlobals/achievementSystem/achievementSystemMain.hpp>
 
 int main()
 {

@@ -10,5 +10,6 @@
 #include <gameGlobals/fonts.hpp>
 #include <gameGlobals/achievementSystem/achievement.hpp>
 #include <gameGlobals/achievementSystem/achievementSystemMain.hpp>
+#include <gameGlobals/updater.hpp>
 
 #endif // game_globals_hpp

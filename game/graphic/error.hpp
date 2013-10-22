@@ -22,7 +22,7 @@ namespace gui
     {
     private:
         ~error() {};
-        error() {};
+        error() { updater::getUpdater().push_back( *this ); };
         error * operator=( const error & ) {};
         error(const error &) {};
     public:
@@ -42,7 +42,7 @@ namespace gui
                         if( event.type == sf::Event::Closed )
                             gameState::config::getConfig().goOff();
                     }
-
+                    updater::getUpdater().update();
                     drawer::getDrawer().draw();
                 }
             }

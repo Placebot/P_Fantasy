@@ -199,13 +199,12 @@
 	<game_globals/config.hpp>
 	<game_globals/extend.hpp>
 
-1382104848 source:d:\repos\p_fantasy\main.cpp
+1382463049 source:d:\repos\p_fantasy\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<gameGlobals/gameGlobals.hpp>
 	<gameGlobals/music.hpp>
 	<graphic/graphic.hpp>
-	<gameGlobals/achievementSystem/achievementSystemMain.hpp>
 
 1377882061 d:\repos\p_fantasy\game\game_globals\game_globals.hpp
 	<game_globals/config.hpp>
@@ -349,7 +348,7 @@
 	<gameGlobals/gameGlobals.hpp>
 	<resourceBank/resourcesMenus.hpp>
 
-1380472790 d:\repos\p_fantasy\game\gameglobals\gameglobals.hpp
+1382463024 d:\repos\p_fantasy\game\gameglobals\gameglobals.hpp
 	<gameGlobals/config.hpp>
 	<gameGlobals/extend.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
@@ -359,8 +358,9 @@
 	<gameGlobals/fonts.hpp>
 	<gameGlobals/achievementSystem/achievement.hpp>
 	<gameGlobals/achievementSystem/achievementSystemMain.hpp>
+	<gameGlobals/updater.hpp>
 
-1382105482 d:\repos\p_fantasy\game\gameglobals\config.hpp
+1382436129 d:\repos\p_fantasy\game\gameglobals\config.hpp
 	<gameGlobals/extend.hpp>
 	<gameGlobals/topLevelGlobals.hpp>
 	<gameGlobals/keyBinding/keybind.hpp>
@@ -375,7 +375,7 @@
 	<iostream>
 	<string>
 
-1382105990 d:\repos\p_fantasy\game\gameglobals\drawer\drawer.hpp
+1382463283 d:\repos\p_fantasy\game\gameglobals\drawer\drawer.hpp
 	<iostream>
 	<vector>
 	<gameGlobals/extend.hpp>
@@ -497,7 +497,7 @@
 	<gameGlobals/extend.hpp>
 	<SFML/Graphics.hpp>
 
-1382122906 d:\repos\p_fantasy\game\graphic\error.hpp
+1382463243 d:\repos\p_fantasy\game\graphic\error.hpp
 	<iostream>
 	<vector>
 	<string>
@@ -515,4 +515,8 @@
 	<gameGlobals/status.hpp>
 
 1382098694 d:\repos\p_fantasy\game\graphic\animation\frame.hpp
+
+1382462993 d:\repos\p_fantasy\game\gameglobals\updater.hpp
+	<gameGlobals/updateable.hpp>
+	<vector>
 

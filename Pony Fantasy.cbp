@@ -67,6 +67,7 @@
 		<Unit filename="game/gameGlobals/status.hpp" />
 		<Unit filename="game/gameGlobals/topLevelGlobals.hpp" />
 		<Unit filename="game/gameGlobals/updateable.hpp" />
+		<Unit filename="game/gameGlobals/updater.hpp" />
 		<Unit filename="game/graphic/animation/animation.hpp" />
 		<Unit filename="game/graphic/animation/animationClock.hpp" />
 		<Unit filename="game/graphic/animation/frame.hpp" />
