@@ -243,13 +243,16 @@
 	<game_globals/drawer/drawer.hpp>
 	<game_globals/console/console_data_grabber.hpp>
 
-1381860294 d:\repos\p_fantasy\game\graphic\graphic.hpp
+1382546695 d:\repos\p_fantasy\game\graphic\graphic.hpp
 	<graphic/animation/animation.hpp>
+	<graphic/style.hpp>
+	<graphic/styleable.hpp>
 	<graphic/button.hpp>
 	<graphic/error.hpp>
 	<graphic/resizeable.hpp>
 	<graphic/positioning.hpp>
 	<graphic/table.hpp>
+	<graphic/text.hpp>
 
 1381859741 d:\repos\p_fantasy\game\graphic\table.hpp
 	<SFML/Graphics.hpp>
@@ -493,9 +496,10 @@
 
 1381856555 d:\repos\p_fantasy\game\graphic\resizeable.hpp
 
-1378477671 d:\repos\p_fantasy\game\graphic\button.hpp
+1382546695 d:\repos\p_fantasy\game\graphic\button.hpp
 	<gameGlobals/extend.hpp>
 	<SFML/Graphics.hpp>
+	<graphic/style.hpp>
 
 1382463243 d:\repos\p_fantasy\game\graphic\error.hpp
 	<iostream>
@@ -519,4 +523,10 @@
 1382462993 d:\repos\p_fantasy\game\gameglobals\updater.hpp
 	<gameGlobals/updateable.hpp>
 	<vector>
+
+1382546542 d:\repos\p_fantasy\game\graphic\styleable.hpp
+
+1382546326 d:\repos\p_fantasy\game\graphic\text.hpp
+
+1382546695 d:\repos\p_fantasy\game\graphic\style.hpp
 

@@ -77,7 +77,10 @@
 		<Unit filename="game/graphic/positioning.cpp" />
 		<Unit filename="game/graphic/positioning.hpp" />
 		<Unit filename="game/graphic/resizeable.hpp" />
+		<Unit filename="game/graphic/style.hpp" />
+		<Unit filename="game/graphic/styleable.hpp" />
 		<Unit filename="game/graphic/table.hpp" />
+		<Unit filename="game/graphic/text.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
