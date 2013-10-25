@@ -6,7 +6,7 @@
 
 #include <graphic/graphic.hpp>
 
-
+// ur a faget
 int main()
 {
     sf::RenderWindow GameWin;
