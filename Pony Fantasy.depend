@@ -546,3 +546,6 @@
 	<gameGlobals/music.hpp>
 	<graphic/graphic.hpp>
 
+1382721538 source:c:\users\pawe³\documents\github\p_fantasy\game\gameglobals\interpreter\interpreterstack.cpp
+	<gameGlobals/interpreter/interpreterStack.hpp>
+

@@ -9,7 +9,7 @@
 #include <gameGlobals/console/consoleDataGrabber.hpp>
 
 #include <gameGlobals/extend.hpp>
-#include <gameGlobals/interpreter/interpreterCore.hpp>
+#include <gameGlobals/interpreter/interpreterStack.hpp>
 
 namespace console
 {
@@ -159,7 +159,7 @@ namespace console
                     {
                         if( sf::Keyboard::isKeyPressed( sf::Keyboard::Return ) && command != "" )
                         {
-                            inputCommand( command );
+                            interpreter::commandList::getList().push_back( command );
                         }
                         else if( sf::Keyboard::isKeyPressed( sf::Keyboard::Tilde ) )
                         {
@@ -173,12 +173,6 @@ namespace console
         };
 
     private:
-        bool inputCommand( const std::string & command )
-        {
-            std::vector< std::string > words = _private::split( command, " " );
-
-
-        };
 
         _private::drawableLogs _logs;
         _private::windowConsoleBackGround _bg;
