@@ -1,6 +1,6 @@
-#include <gameGlobals/console/console.hpp>
+#include <gameGlobals/interpreter/interpreterStack.hpp>
 
-namespace _private
+namespace interpreter
 {
     std::vector< std::string > split( std::string str, std::string deliminator) ///! Zeke's code
     {
@@ -14,15 +14,5 @@ namespace _private
             pos = nextPos + 1;
         }
         return tokens;
-    }
-}
-
-namespace console
-{
-    void consoleActivation( sf::Event & event )
-    {
-        if( event.type == sf::Event::KeyPressed
-           && sf::Keyboard::isKeyPressed( sf::Keyboard::Tilde ) )
-           console::windowConsole::getWinConsole().boot();
     }
 }

@@ -530,3 +530,22 @@
 
 1382546695 d:\repos\p_fantasy\game\graphic\style.hpp
 
+1382703404 source:c:\users\pawe許documents\github\p_fantasy\game\gameglobals\console\console.cpp
+	<gameGlobals/console/console.hpp>
+
+1382692349 source:c:\users\pawe許documents\github\p_fantasy\game\gameglobals\keybinding\keybind.cpp
+	<gameGlobals/keyBinding/keybind.hpp>
+
+1382692349 source:c:\users\pawe許documents\github\p_fantasy\game\graphic\positioning.cpp
+	<graphic/positioning.hpp>
+
+1382692349 source:c:\users\pawe許documents\github\p_fantasy\main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<gameGlobals/gameGlobals.hpp>
+	<gameGlobals/music.hpp>
+	<graphic/graphic.hpp>
+
+1382721538 source:c:\users\pawe許documents\github\p_fantasy\game\gameglobals\interpreter\interpreterstack.cpp
+	<gameGlobals/interpreter/interpreterStack.hpp>
+

@@ -9,6 +9,7 @@
 #include <gameGlobals/console/consoleDataGrabber.hpp>
 
 #include <gameGlobals/extend.hpp>
+#include <gameGlobals/interpreter/interpreterStack.hpp>
 
 namespace console
 {
@@ -86,7 +87,7 @@ namespace _private
             for( unsigned int i = _logs.size()-1; i > -1; i-- )
             {
                 _logs[i].setPosition( 0.0, 300.0 - offsetY );
-                offsetY = offsetY + _logs[0].getGlobalBounds().height;
+                offsetY = offsetY + _logs[0].getGlobalBounds().height + 2.0;
             }
         }
         else
@@ -107,6 +108,8 @@ namespace _private
     std::vector< sf::Text > _logs;
     windowConsoleBackGround * _bg = NULL;
     };
+
+    std::vector< std::string > split( std::string str, std::string deliminator);
 }
 
 namespace console
@@ -130,7 +133,6 @@ namespace console
 
             drawer::getDrawer().push_back( _bg, drawer::console );
 
-            sf::Clock timer;
             std::string command;
             while( gameState::config::getConfig().getRunning() && !exit )
             {
@@ -157,7 +159,7 @@ namespace console
                     {
                         if( sf::Keyboard::isKeyPressed( sf::Keyboard::Return ) && command != "" )
                         {
-                            inputCommand( command );
+                            interpreter::commandList::getList().push_back( command );
                         }
                         else if( sf::Keyboard::isKeyPressed( sf::Keyboard::Tilde ) )
                         {
@@ -166,29 +168,11 @@ namespace console
                         }
                     }
                 }
-
-
-
-                std::cout << "poll finished" << std::endl;
-                if( timer.getElapsedTime().asSeconds() > 5 )
-                {
-                    timer.restart();
-                    std::cout << "still alive~" << std::endl;
-                }
-
                 drawer::getDrawer().draw();
             }
         };
 
     private:
-        void inputCommand( const std::string & command )
-        {
-            std::string result;
-
-
-
-
-        };
 
         _private::drawableLogs _logs;
         _private::windowConsoleBackGround _bg;

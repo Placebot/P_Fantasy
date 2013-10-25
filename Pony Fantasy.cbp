@@ -58,6 +58,10 @@
 		<Unit filename="game/gameGlobals/extend.hpp" />
 		<Unit filename="game/gameGlobals/fonts.hpp" />
 		<Unit filename="game/gameGlobals/gameGlobals.hpp" />
+		<Unit filename="game/gameGlobals/interpreter/interpreterCore.hpp" />
+		<Unit filename="game/gameGlobals/interpreter/interpreterStack.cpp" />
+		<Unit filename="game/gameGlobals/interpreter/interpreterStack.hpp" />
+		<Unit filename="game/gameGlobals/interpreter/interpreterVariables.hpp" />
 		<Unit filename="game/gameGlobals/keyBinding/keybind.cpp" />
 		<Unit filename="game/gameGlobals/keyBinding/keybind.hpp" />
 		<Unit filename="game/gameGlobals/music.hpp" />
